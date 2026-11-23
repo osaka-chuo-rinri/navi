@@ -185,6 +185,13 @@ details.more[open]>summary::after{content:"− 閉じる"}
 .photo-pair figure{margin:0}
 .photo-pair img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 6px 14px rgba(120,70,30,.10)}
 .photo-pair figcaption{font-size:13px;font-weight:700;text-align:center;margin-top:4px}
+.about-fig{margin:0 0 16px}.about-fig .illust{margin:0 0 6px}.about-fig figcaption{font-size:13px;font-weight:700;text-align:center;color:var(--muted)}
+.line-purpose{display:grid;gap:8px;margin:8px 0}
+.lp{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14px}
+.lp dl{display:grid;grid-template-columns:4.5em 1fr;gap:4px 8px;margin:6px 0 0}
+.lp dt{color:var(--muted);font-weight:700}.lp dd{margin:0}
+.ref-links{margin:0;padding-left:1.2em;line-height:2}
+.from a,.from-note a{color:inherit;text-decoration:underline}
 /* タイプ選択 */
 .types{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
 .types button{min-height:44px;padding:6px 14px;border-radius:999px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font:700 14px var(--font-body);cursor:pointer}
@@ -338,10 +345,16 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
         <div>
           <span class="tag buddy">バディの招待で</span>
           <label for="t2">グループLINEに2つ参加する</label>
-          <ul class="mini">
-            <li><b>大好きLINE</b>：（届く情報・返信が必要か）<span class="todo">要記入</span></li>
-            <li><b>明るく朗らかLINE</b>：（届く情報・返信が必要か）<span class="todo">要記入</span></li>
-          </ul>
+          <div class="line-purpose">
+            <div class="lp"><b>大好きLINE</b>
+              <dl><dt>目的</dt><dd>（このLINEの目的）<span class="todo">要記入</span></dd>
+              <dt>届く情報</dt><dd>（どんな連絡が来るか）<span class="todo">要記入</span></dd>
+              <dt>返信</dt><dd>（必要／不要）<span class="todo">要記入</span></dd></dl></div>
+            <div class="lp"><b>明るく朗らかLINE</b>
+              <dl><dt>目的</dt><dd>（このLINEの目的）<span class="todo">要記入</span></dd>
+              <dt>届く情報</dt><dd>（どんな連絡が来るか）<span class="todo">要記入</span></dd>
+              <dt>返信</dt><dd>（必要／不要）<span class="todo">要記入</span></dd></dl></div>
+          </div>
           <p class="why" id="t2d">バディから招待が届いたら「参加」を押せば完了です。通知が多ければ、トークごとに通知をオフにして大丈夫です。</p>
         </div>
       </div>
@@ -485,7 +498,7 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
       <div class="stat"><b>○○社</b><span>大阪中央区の今の会員<br><span class="todo">要記入</span></span></div>
       <div class="stat"><b>180社</b><span>大阪中央区の目標<br>（2027年8月）</span></div>
     </div>
-    <p class="from-note">出典：全国＝倫理研究所 公式サイト、大阪府＝大阪府倫理法人会 令和9年度 会長メッセージ。全国では8万社の体制を、大阪府では令和9年度に5,050社・35単会を目指しています。</p>
+    <p class="from-note">出典：全国＝<a href="https://www.rinri-jpn.or.jp/houjin/" target="_blank" rel="noopener">倫理研究所「倫理法人会」</a>、大阪府＝大阪府倫理法人会 令和9年度 会長メッセージ（会内資料）。全国では8万社の体制を、大阪府では令和9年度に5,050社・35単会を目指しています。</p>
 
     <h3 class="sub-h">どんな会とつながっている？</h3>
     <div class="tree">
@@ -520,6 +533,7 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
   <div class="wrap">
     <div class="sec-head"><div class="sec-num">5</div><div><div class="eyebrow">入会した理由に合わせて</div><h2>中央区で手に入るもの</h2></div></div>
     <p class="lead">仕事のことだけでなく、家庭のこと、生き方のこと、自分自身のこと。<br>あなたが入会した理由は、どれに近いですか？タップしてみてください。</p>
+    <figure class="about-fig"><img class="illust" src="value-types.webp" onerror="this.closest('figure').hidden=true" width="960" height="640" loading="lazy" alt="若い起業家、二代目社長、女性経営者、ベテラン社長、飲食店のオーナー、職人、士業、幹部社員など、さまざまな経営者が朝の会場で笑顔で並んでいるイラスト"><figcaption>業種も年代も立場も、いろいろな人が集まっています</figcaption></figure>
     <div class="types" role="group" aria-label="入会した理由">
       <button type="button" data-type="0" aria-pressed="true">経営の軸を整えたい</button>
       <button type="button" data-type="1" aria-pressed="false">相談できる仲間がほしい</button>
@@ -543,12 +557,13 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
     <p class="note-box">ここは商売の場ではありません。信頼が積み重なった先に、仕事のご縁が生まれることがあります。</p>
 
     <h3 style="font-size:19px;margin:28px 0 12px">先輩たちの変化</h3>
+    <figure class="about-fig"><img class="illust" src="value-change.webp" onerror="this.closest('figure').hidden=true" width="960" height="640" loading="lazy" alt="左は夜のオフィスで一人で書類を前に頭を抱える経営者、右は朝日の中で仲間や家族と笑い合う同じ経営者のイラスト"><figcaption>ひとりで抱えていた朝から、仲間と迎える朝へ</figcaption></figure>
     <div class="voices">
       <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">（中央区の会員の声：入会前の悩み → 続けて変わったこと）<span class="from">○○業・入会○年目 <span class="todo">本人の許可を得て掲載</span></span></div></div>
       <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">（中央区の会員の声）<span class="from">○○業・入会○年目 <span class="todo">本人の許可を得て掲載</span></span></div></div>
-      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">他の地域では、社内で勉強会を続けていた会社の社長が入会し、学びを社内の取り組みに生かしています。夫婦の関係を見つめ直したことで苦しい時期を乗り越えた、という会長の話もあります。<span class="from">他の地域の会員インタビューより要約（coki.jp）</span></div></div>
-      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">一人で起業して1年ほどの頃、「朝活をしたい」と入会。続けるうちに心が落ち着き、仕事の環境も整ってきたと感じたそうです。倫理は「方法を教わるより、自分で気づく学び」だと話しています。<span class="from">他の地域の会報より要約（熊本県・八代市倫理法人会）</span></div></div>
-      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">子どもの学校の役員を引き受けたことをきっかけに、「自分の生き方を問い直したい」と思うようになり、倫理法人会に出会った会長もいます。学びは経営だけでなく、地域との関わりでも生きたそうです。<span class="from">他の地域の会員インタビューより要約（coki.jp）</span></div></div>
+      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">他の地域では、社内で勉強会を続けていた会社の社長が入会し、学びを社内の取り組みに生かしています。夫婦の関係を見つめ直したことで苦しい時期を乗り越えた、という会長の話もあります。<span class="from">他の地域の会員インタビューより要約（coki.jp：<a href="https://coki.jp/stakeholder/community/26734/" target="_blank" rel="noopener">社内勉強会の記事</a>／<a href="https://coki.jp/stakeholder/community/29760/" target="_blank" rel="noopener">夫婦の記事</a>）</span></div></div>
+      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">一人で起業して1年ほどの頃、「朝活をしたい」と入会。続けるうちに心が落ち着き、仕事の環境も整ってきたと感じたそうです。倫理は「方法を教わるより、自分で気づく学び」だと話しています。<span class="from">他の地域の会報より要約（<a href="https://rinri-kumamoto.com/wp-content/uploads/2018/12/0a5da562699e99badf9a362233da179e.pdf" target="_blank" rel="noopener">熊本県・八代市倫理法人会 会報（PDF）</a>）</span></div></div>
+      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">子どもの学校の役員を引き受けたことをきっかけに、「自分の生き方を問い直したい」と思うようになり、倫理法人会に出会った会長もいます。学びは経営だけでなく、地域との関わりでも生きたそうです。<span class="from">他の地域の会員インタビューより要約（<a href="https://coki.jp/stakeholder/community/29760/" target="_blank" rel="noopener">coki.jp</a>）</span></div></div>
     </div>
   </div>
 </section>
@@ -614,6 +629,17 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
     <div class="sec-head"><div class="sec-num">8</div><div><div class="eyebrow">いつでもここへ</div><h2>今週の案内・困ったとき</h2></div></div>
     <div class="help">
       <div class="card"><h3>今週のモーニングセミナー</h3><p style="margin:0"><a href="#first-ms">「はじめての金曜の朝」の今週の案内を見る</a></p></div>
+      <div class="card"><h3>もっと知りたいとき（参考リンク）</h3>
+        <ul class="ref-links">
+          <li><a href="https://www.rinri-jpn.or.jp/houjin/" target="_blank" rel="noopener">倫理法人会とは（倫理研究所）</a></li>
+          <li><a href="https://osaka-rinri.net/" target="_blank" rel="noopener">大阪府倫理法人会</a></li>
+          <li><a href="https://www.rinri-jpn.or.jp/ec/html/products/detail/459" target="_blank" rel="noopener">『万人幸福の栞』（倫理の本棚）</a></li>
+          <li><a href="https://www.instagram.com/osaka.chuouku_rinri/" target="_blank" rel="noopener">大阪中央区倫理法人会 Instagram</a></li>
+          <li><a href="https://coki.jp/stakeholder/community/29760/" target="_blank" rel="noopener">先輩の体験談：家庭と地域で生きた学び（coki.jp）</a></li>
+          <li><a href="https://coki.jp/stakeholder/community/26734/" target="_blank" rel="noopener">先輩の体験談：学びを会社で実践（coki.jp）</a></li>
+        </ul>
+        <p class="credit">外部のサイトが開きます。</p>
+      </div>
       <div class="card"><h3>困ったとき</h3><p style="margin:0">まずはバディへLINEで一言。<br>返事がないときは、Bチームの担当（お名前）へ。<span class="todo">要記入</span></p></div>
     </div>
   </div>
