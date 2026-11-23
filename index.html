@@ -194,6 +194,11 @@ details.more[open]>summary::after{content:"− 閉じる"}
 .from a,.from-note a{color:inherit;text-decoration:underline}
 .addr{display:block;font-size:14px;color:var(--muted);margin-top:2px}
 .venue-links{display:grid;gap:8px;margin-top:10px}
+.kokoroe{margin:0;padding-left:1.4em;line-height:1.8;font-size:15px}
+.role-steps{list-style:none;margin:0 0 8px;padding:0;display:grid;gap:6px}
+.role-steps li{display:grid;grid-template-columns:6.5em 1fr;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:15px}
+.role-steps time{font-weight:700;color:var(--c-orange,#e8702a);font-size:13px}
+.fee{margin:0 0 6px;padding-left:1.2em;line-height:1.9;font-size:14px}
 /* タイプ選択 */
 .types{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
 .types button{min-height:44px;padding:6px 14px;border-radius:999px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font:700 14px var(--font-body);cursor:pointer}
@@ -433,12 +438,21 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
       <h3>当日の流れ</h3>
       <p class="sub">夜明け前の街から、朝日の中へ。</p>
       <ol class="tl">
-        <li><time>5:50</time><div><b>受付でバディと合流</b><span>時刻と場所は、前日にバディから届きます。</span></div></li>
-        <li><time>6:00</time><div><b>活力朝礼</b><span>あいさつと小冊子の読み合わせ。周りに合わせれば大丈夫。</span></div></li>
-        <li><time>6:30</time><div><b>モーニングセミナー</b><span>講話者の話を聞きます。メモを取る方が多いです。</span></div></li>
-        <li><time>その後</time><div><b>朝食会</b><span>バディが隣に座ります。会員と話せる時間です。</span></div></li>
+        <li><time>5:45</time><div><b>会場の準備・リハーサル</b><span>お役のある人の準備時間です。はじめての日は、6時少し前に受付でバディと合流すれば大丈夫。待ち合わせは前日にバディから届きます。</span></div></li>
+        <li><time>6:00</time><div><b>モーニングセミナー朝礼</b><span>あいさつと『職場の教養』の読み合わせ。周りに合わせれば大丈夫。</span></div></li>
+        <li><time>6:30</time><div><b>モーニングセミナー</b><span>進行の順番：朝の挨拶 → 会員スピーチ → 講話 → 連絡事項 → 誓いの言葉。メモを取る方が多いです。</span></div></li>
+        <li><time>7:45</time><div><b>朝食会</b><span>バディが隣に座ります。会員と話せる時間です。</span></div></li>
       </ol>
     </div>
+    <p class="note-box"><b>まずは3か月、週に1回だけ。</b>モーニングセミナーに続けて参加してみてください。早起き・あいさつ・心のリセットの変化は、続けるうちに感じられます。</p>
+    <h3 class="sub-h">会場での小さな実践</h3>
+    <div class="acts">
+      <div class="act"><b>入退室時の一礼</b><span>会場に入るとき・出るときに一礼。学ぶ場への感謝です。</span></div>
+      <div class="act"><b>先手のあいさつ</b><span>自分から先に、明るく声をかけます。</span></div>
+      <div class="act"><b>2分間の静寂</b><span>静かに座り、「今、何をするときか」を考えます。</span></div>
+      <div class="act"><b>輪読</b><span>みんなで順番に読み上げます。すぐに・積極的に。</span></div>
+    </div>
+    <p class="from-note">出典：大阪中央区倫理法人会「新入会員オリエンテーション」資料</p>
     <div class="week"><small>今週の金曜のモーニングセミナー</small><b>○月○日（金）講話者：○○○○ 氏</b><span>テーマ：「○○○○」</span><span class="todo">毎週更新・更新方法を決める</span></div>
     <div class="facts">
       <div class="fact"><svg class="ico"><use href="#i-map"/></svg><div><b>会場</b>ホテルプリムローズ大阪　3階<br><span class="addr">〒540-0008 大阪市中央区大手前3丁目1番43号</span>
@@ -449,7 +463,7 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
         </div></div></div>
       <div class="fact"><svg class="ico"><use href="#i-shirt"/></svg><div><b>服装</b>（会の目安）<span class="todo">要確認</span></div></div>
       <div class="fact"><svg class="ico"><use href="#i-pen"/></svg><div><b>持ち物</b>筆記用具。小冊子『職場の教養』の受け取り方 <span class="todo">要確認</span></div></div>
-      <div class="fact ok"><svg class="ico"><use href="#i-heart"/></svg><div><b>行けなくなっても大丈夫</b>バディに一言送るだけでOK。休んだ翌週こそ、顔を見せてくれるとみんな喜びます。</div></div>
+      <div class="fact ok"><svg class="ico"><use href="#i-heart"/></svg><div><b>行けなくなっても大丈夫</b>バディに一言送るだけでOK。休んだ翌週こそ、顔を見せてくれるとみんな喜びます。モーニングセミナーは、ほかの地域の会（大阪府内に33か所、全国に約750か所）でも参加できます。</div></div>
     </div>
   </div>
 </section>
@@ -493,8 +507,13 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
 
     <h3 class="sub-h">何を目的にしている会？</h3>
     <div class="card-plain">
-      <p>実行すればすぐに確かめられる生活の法則（純粋倫理）をもとに、<b>経営者自身が変わること</b>を出発点にしています。心を大切にする経営を目指す仲間の輪を広げ、互いを尊び共に生きる精神で健やかに栄え、地域と社会に貢献することを目的としています。</p>
-      <p class="from-note">出典：倫理法人会規程 第3条（要約）</p>
+      <p><b>倫理法人会憲章</b><br>倫理法人会は、実行によって直ちに正しさが証明できる純粋倫理を基底に、経営者の自己革新をはかり、心の経営を目指す人々のネットワークを拡げ、共尊共生の精神に則った健全な繁栄を実現し、地域社会の発展と美しい世界づくりに貢献することを目的とした団体である。</p>
+      <p class="muted" style="font-size:14px">ひとことで言うと：<b>経営者自身が変わること</b>から始めて、仲間と一緒に会社・家庭・地域を良くしていく会です。</p>
+      <h4 style="margin:14px 0 6px">会員心得</h4>
+      <ol class="kokoroe"><li>朗らかに働き、喜びの人生を創造します。</li><li>約束を守り、信頼の輪をひろげます。</li><li>人を愛して争わず、互いの繁栄をねがいます。</li></ol>
+      <details class="more" style="margin-top:10px"><summary>活動指針（5つ）を読む</summary>
+      <ol class="kokoroe"><li>倫理の学習と実践の場を提供し、よりよい生活習慣と豊かな人間性をそなえたリーダーを養成する。</li><li>深く家族を愛し、篤く祖先を敬い、なごやかでゆるぎない家庭を築く人を育てる。</li><li>『明朗』『愛和』『喜働』の実践により、躍動する職場づくりを推進する。</li><li>愛と敬と感謝の経営を目指す会員の輪を拡げ、各種の活動をとおして地域社会の発展に寄与する。</li><li>自然を畏敬・親愛し、『地球人』たる自覚を深め、環境の保全と美化に貢献する。</li></ol></details>
+      <p class="from-note">出典：倫理法人会憲章・活動指針・会員心得（大阪中央区倫理法人会「新入会員オリエンテーション」資料より）</p>
     </div>
 
     <h3 class="sub-h">どんな規模？</h3>
@@ -525,13 +544,16 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
     </div>
     <div class="acts">
       <div class="act"><b>経営者モーニングセミナー</b><span>毎週金曜の朝。講話者の体験談から学ぶ、会の中心となる場</span></div>
-      <div class="act"><b>活力朝礼</b><span>『職場の教養』を使った朝礼。会社に導入する指導も受けられる</span></div>
-      <div class="act"><b>倫理経営基礎講座</b><span>倫理の考え方を基本から順に学べる講座</span></div>
-      <div class="act"><b>経営者倫理セミナー</b><span>富士山麓の研修所で、日常を離れて自分と向き合う宿泊研修</span></div>
-      <div class="act"><b>後継者倫理塾</b><span>会社を継ぐ人・継いだ人のための学びの場</span></div>
-      <div class="act"><b>倫理経営の個別相談</b><span>経営や家庭の悩みを、研究所の講師に相談できる</span></div>
+      <div class="act"><b>倫理経営指導（個別相談）</b><span>「経営」「夫婦」「親子」「健康」「人間関係」など、どんな悩みでも資格のある講師に1対1で相談できます。<b>無料・何度でも</b>。申し込みは会長か専任幹事へ</span></div>
+      <div class="act"><b>活力朝礼の推進</b><span>『職場の教養』を使った朝礼。資格を持つ役員が、あなたの会社へ無料で指導に来てくれます</span></div>
+      <div class="act"><b>経営者倫理セミナー（富士研）</b><span>静岡県御殿場市の富士高原研修所での宿泊研修。大自然の中で自分を見つめ直し、両親への感謝を確かめる場。大阪府では費用の半額負担制度あり</span></div>
+      <div class="act"><b>倫理経営講演会（りんけい）</b><span>年に1回の夜の講演会。単会にとって最も大切な行事です</span></div>
+      <div class="act"><b>経営者の集い・ナイトセミナー</b><span>倫理の体験や事業体験の報告を聴ける講演会</span></div>
+      <div class="act"><b>倫理経営基礎講座</b><span>年6〜8回。『万人幸福の栞』17か条と7つの原理を学ぶ。実行委員以上が参加できます</span></div>
+      <div class="act"><b>後継者倫理塾</b><span>会社を継ぐ人のための10か月の研修（費用あり）</span></div>
     </div>
     <p class="note-box">開催の時期や参加方法は会によって異なります。気になるものがあれば、バディに聞いてください。</p>
+    <p class="from-note">出典：大阪中央区倫理法人会「新入会員オリエンテーション」資料</p>
   </div>
 </section>
 
@@ -579,6 +601,20 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
 <section id="roadmap">
   <div class="wrap">
     <div class="sec-head"><div class="sec-num">6</div><div><div class="eyebrow">これからの歩み</div><h2>あなたの成長ロードマップ</h2></div></div>
+    <h3 class="sub-h">中央区での「お役」のステップ（目安）</h3>
+    <p class="muted" style="font-size:14px;margin-top:0">モーニングセミナーのお役を通して、明朗・愛和・喜働を実践していきます。お役は「マニュアル通りに、徹底的に準備」が基本です。</p>
+    <ol class="role-steps">
+      <li><time>入会1か月以内</time><b>新入会員オリエンテーション</b></li>
+      <li><time>3か月</time><b>MS「5分前アナウンス」／MS朝礼「朝の挨拶」</b></li>
+      <li><time>3か月目</time><b>会員スピーチ</b></li>
+      <li><time>4か月目</time><b>MS朝礼「挨拶実習」</b></li>
+      <li><time>6か月目</time><b>MS朝礼・MSの「司会進行」／MS「輪読」</b></li>
+      <li><time>6か月以降</time><b>実行委員・委員会、役員会</b></li>
+      <li><time>7か月以降</time><b>ナイトセミナーの実行委員長</b></li>
+    </ol>
+    <p class="muted" style="font-size:13px">入会1年未満の方は幹事になれないため、「実行委員」という制度があります。</p>
+    <p class="from-note">出典：大阪中央区倫理法人会「新入会員オリエンテーション」資料</p>
+    <h3 class="sub-h">あなたの「状態」のステップ</h3>
     <p class="lead">9つの段階は、あなたの「状態」です。<br>期間は目安。早い・遅いはありません。</p>
     <div class="road">
       <span class="phase" style="--c:var(--c-red)">はじめの1か月ほど</span>
@@ -618,13 +654,21 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
     <div class="terms">
       <div class="term"><b>MS（モーニングセミナー）</b><span>毎週金曜6:30から、講話者の話を聞く場です。</span></div>
       <div class="term"><b>活力朝礼</b><span>MSの前の朝礼。あいさつと小冊子の読み合わせ。</span></div>
-      <div class="term"><b>単会</b><span>地域ごとの会のこと。ここは「大阪中央区」の単会です。</span></div>
+      <div class="term"><b>単会（たんかい）</b><span>地域ごとの会のこと。ここは「大阪中央区」の単会です。</span></div>
+      <div class="term"><b>倫経（りんけい）</b><span>倫理経営講演会。単会で最も大切な、年1回の夜の行事。</span></div>
+      <div class="term"><b>普及（ふきゅう）</b><span>共に学ぶ仲間を増やす、さまざまな活動のこと。</span></div>
+      <div class="term"><b>倫友（りんゆう）</b><span>倫理法人会で出会った、真の仲間。</span></div>
+      <div class="term"><b>純粋倫理</b><span>実行すればすぐに正しさが確かめられる、幸せと繁栄のための生活の法則。宗教でも主義でもありません。</span></div>
+      <div class="term"><b>七つの原理</b><span>純粋倫理の根幹となる、幸せや成功のための原理原則。</span></div>
     </div>
     <div class="faq">
       <details><summary>毎週は行けそうにありません</summary><p>行ける週だけで大丈夫です。行けない週はバディに一言送ってください。Instagramで様子を見ておくと、次に行ったとき話に入りやすくなります。</p></details>
       <details><summary>知り合いがいなくて不安です</summary><p>当日はバディが受付で待ち、朝食会でも隣に座ります。一人の時間をつくらないようにしています。</p></details>
       <details><summary>自分の仕事の話をしてもいいですか？</summary><p>自己紹介でお仕事を話すのは大丈夫です。会の中での宣伝や売り込みは、規程で禁止されています。</p></details>
-      <details><summary>会費や手続きのことを知りたい</summary><p>会費は月額1口1万円です（倫理法人会規程 第6条）。会員には『職場の教養』が贈られます。手続きのことは事務局にお問い合わせください。（問い合わせ先）<span class="todo">要記入</span></p></details>
+      <details><summary>会費や手続きのことを知りたい</summary><p>会費は月額1口1万円です（倫理法人会規程 第6条）。会員には『職場の教養』が贈られます。</p>
+        <p><b>1万円の使いみち</b></p>
+        <ul class="fee"><li>活動助成金　4,570円（うち2,000円は中央区の会へ）</li><li>その他の公共事業　2,450円</li><li>『職場の教養』の製作　1,340円</li><li>運営・学習支援　850円</li><li>講師の派遣　590円</li><li>消費税（仕入控除の対象外）　200円</li></ul>
+        <p class="from-note">出典：大阪中央区倫理法人会「新入会員オリエンテーション」資料</p><p>手続きのことは事務局にお問い合わせください。（問い合わせ先）<span class="todo">要記入</span></p></details>
       <details><summary>何を聞けばいいかわかりません</summary><p>「次の金曜、何時にどこへ行けばいいですか？」の一言からで十分です。</p></details>
     </div>
   </div>
