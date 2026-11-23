@@ -192,6 +192,8 @@ details.more[open]>summary::after{content:"− 閉じる"}
 .lp dt{color:var(--muted);font-weight:700}.lp dd{margin:0}
 .ref-links{margin:0;padding-left:1.2em;line-height:2}
 .from a,.from-note a{color:inherit;text-decoration:underline}
+.addr{display:block;font-size:14px;color:var(--muted);margin-top:2px}
+.venue-links{display:grid;gap:8px;margin-top:10px}
 /* タイプ選択 */
 .types{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
 .types button{min-height:44px;padding:6px 14px;border-radius:999px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font:700 14px var(--font-body);cursor:pointer}
@@ -439,7 +441,12 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
     </div>
     <div class="week"><small>今週の金曜のモーニングセミナー</small><b>○月○日（金）講話者：○○○○ 氏</b><span>テーマ：「○○○○」</span><span class="todo">毎週更新・更新方法を決める</span></div>
     <div class="facts">
-      <div class="fact"><svg class="ico"><use href="#i-map"/></svg><div><b>会場</b>（会場名と住所）<span class="todo">要記入</span><br><a href="#first-ms" aria-disabled="true">地図を開く（URL準備中）</a></div></div>
+      <div class="fact"><svg class="ico"><use href="#i-map"/></svg><div><b>会場</b>ホテルプリムローズ大阪　3階<br><span class="addr">〒540-0008 大阪市中央区大手前3丁目1番43号</span>
+        <div class="venue-links">
+          <a class="btn" href="https://www.google.com/maps/place/%E3%83%9B%E3%83%86%E3%83%AB%E3%83%97%E3%83%AA%E3%83%A0%E3%83%AD%E3%83%BC%E3%82%BA%E5%A4%A7%E9%98%AA/@34.683978,135.5184852,17z" target="_blank" rel="noopener">Googleマップで開く</a>
+          <a class="btn ghost" href="https://www.primrose-osaka.com/" target="_blank" rel="noopener">ホテルのサイト</a>
+          <a class="btn ghost" href="tel:0669411231">ホテルに電話（06-6941-1231）</a>
+        </div></div></div>
       <div class="fact"><svg class="ico"><use href="#i-shirt"/></svg><div><b>服装</b>（会の目安）<span class="todo">要確認</span></div></div>
       <div class="fact"><svg class="ico"><use href="#i-pen"/></svg><div><b>持ち物</b>筆記用具。小冊子『職場の教養』の受け取り方 <span class="todo">要確認</span></div></div>
       <div class="fact ok"><svg class="ico"><use href="#i-heart"/></svg><div><b>行けなくなっても大丈夫</b>バディに一言送るだけでOK。休んだ翌週こそ、顔を見せてくれるとみんな喜びます。</div></div>
