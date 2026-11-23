@@ -225,7 +225,8 @@ details.more[open]>summary::after{content:"− 閉じる"}
 /* 声 */
 .voices{display:grid;gap:14px;margin-top:8px}
 .voice{display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:start}
-.voice .face{width:48px;height:48px;border-radius:50%;background:var(--sky);color:var(--c-blue);display:grid;place-items:center}
+.voice .face{width:48px;height:48px;border-radius:50%;background:var(--sky);color:var(--c-blue);display:grid;place-items:center;overflow:hidden;position:relative}
+.voice .face img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .voice .text{background:var(--surface);border:1px solid var(--line);border-radius:4px 18px 18px 18px;padding:12px 14px;font-size:15px;line-height:1.75}
 .voice .from{display:block;font-size:12px;color:var(--muted);margin-top:6px}
 
@@ -609,11 +610,11 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
     <h3 style="font-size:19px;margin:28px 0 12px">先輩たちの変化</h3>
     <figure class="about-fig"><img class="illust" src="value-change.webp" onerror="this.closest('figure').hidden=true" width="960" height="640" loading="lazy" alt="左は夜のオフィスで一人で書類を前に頭を抱える経営者、右は朝日の中で仲間や家族と笑い合う同じ経営者のイラスト"><figcaption>ひとりで抱えていた朝から、仲間と迎える朝へ</figcaption></figure>
     <div class="voices">
-      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">（中央区の会員の声：入会前の悩み → 続けて変わったこと）<span class="from">○○業・入会○年目 <span class="todo">本人の許可を得て掲載</span></span></div></div>
-      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">（中央区の会員の声）<span class="from">○○業・入会○年目 <span class="todo">本人の許可を得て掲載</span></span></div></div>
-      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">他の地域では、社内で勉強会を続けていた会社の社長が入会し、学びを社内の取り組みに生かしています。夫婦の関係を見つめ直したことで苦しい時期を乗り越えた、という会長の話もあります。<span class="from">他の地域の会員インタビューより要約（coki.jp：<a href="https://coki.jp/stakeholder/community/26734/" target="_blank" rel="noopener">社内勉強会の記事</a>／<a href="https://coki.jp/stakeholder/community/29760/" target="_blank" rel="noopener">夫婦の記事</a>）</span></div></div>
-      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">一人で起業して1年ほどの頃、「朝活をしたい」と入会。続けるうちに心が落ち着き、仕事の環境も整ってきたと感じたそうです。倫理は「方法を教わるより、自分で気づく学び」だと話しています。<span class="from">他の地域の会報より要約（<a href="https://rinri-kumamoto.com/wp-content/uploads/2018/12/0a5da562699e99badf9a362233da179e.pdf" target="_blank" rel="noopener">熊本県・八代市倫理法人会 会報（PDF）</a>）</span></div></div>
-      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">子どもの学校の役員を引き受けたことをきっかけに、「自分の生き方を問い直したい」と思うようになり、倫理法人会に出会った会長もいます。学びは経営だけでなく、地域との関わりでも生きたそうです。<span class="from">他の地域の会員インタビューより要約（<a href="https://coki.jp/stakeholder/community/29760/" target="_blank" rel="noopener">coki.jp</a>）</span></div></div>
+      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg><img src="voice-1.webp" alt="" width="96" height="96" loading="lazy" onerror="this.remove()"></div><div class="text">（中央区の会員の声：入会前の悩み → 続けて変わったこと）<span class="from">○○業・入会○年目 <span class="todo">本人の許可を得て掲載</span></span></div></div>
+      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg><img src="voice-2.webp" alt="" width="96" height="96" loading="lazy" onerror="this.remove()"></div><div class="text">（中央区の会員の声）<span class="from">○○業・入会○年目 <span class="todo">本人の許可を得て掲載</span></span></div></div>
+      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg><img src="voice-3.webp" alt="" width="96" height="96" loading="lazy" onerror="this.remove()"></div><div class="text">他の地域では、社内で勉強会を続けていた会社の社長が入会し、学びを社内の取り組みに生かしています。夫婦の関係を見つめ直したことで苦しい時期を乗り越えた、という会長の話もあります。<span class="from">他の地域の会員インタビューより要約（coki.jp：<a href="https://coki.jp/stakeholder/community/26734/" target="_blank" rel="noopener">社内勉強会の記事</a>／<a href="https://coki.jp/stakeholder/community/29760/" target="_blank" rel="noopener">夫婦の記事</a>）</span></div></div>
+      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg><img src="voice-4.webp" alt="" width="96" height="96" loading="lazy" onerror="this.remove()"></div><div class="text">一人で起業して1年ほどの頃、「朝活をしたい」と入会。続けるうちに心が落ち着き、仕事の環境も整ってきたと感じたそうです。倫理は「方法を教わるより、自分で気づく学び」だと話しています。<span class="from">他の地域の会報より要約（<a href="https://rinri-kumamoto.com/wp-content/uploads/2018/12/0a5da562699e99badf9a362233da179e.pdf" target="_blank" rel="noopener">熊本県・八代市倫理法人会 会報（PDF）</a>）</span></div></div>
+      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg><img src="voice-5.webp" alt="" width="96" height="96" loading="lazy" onerror="this.remove()"></div><div class="text">子どもの学校の役員を引き受けたことをきっかけに、「自分の生き方を問い直したい」と思うようになり、倫理法人会に出会った会長もいます。学びは経営だけでなく、地域との関わりでも生きたそうです。<span class="from">他の地域の会員インタビューより要約（<a href="https://coki.jp/stakeholder/community/29760/" target="_blank" rel="noopener">coki.jp</a>）</span></div></div>
     </div>
   </div>
 </section>
