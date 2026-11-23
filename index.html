@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大阪中央区 新入会員ナビ</title>
+<meta name="description" content="大阪中央区倫理法人会に入会された方のための案内ページです。入会初日にやること、はじめてのモーニングセミナー、サポートの仕組みをまとめています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 金曜の夜明け：空の青から朝日の橙へ。サポートBOOKの4色（紅・橙・青・緑）は役割の色として使う。スマホ1列、カードは大きく、文は短く */
+  --bg:#fffaf4;
+  --surface:#ffffff;
+  --ink:#2a2420;
+  --muted:#6e6358;
+  --line:#efe3d6;
+  --accent:#e46a24;
+  --accent-soft:#ffecdc;
+  --sky:#eaf3fb;
+  --c-red:#d9546a; --c-orange:#e98a2e; --c-blue:#3a7fc1; --c-green:#5f9a45;
+  --font-display:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;
+  --font-body:"BIZ UDPGothic","Hiragino Sans","Noto Sans JP",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1c1916; --surface:#272320; --ink:#f3ece4; --muted:#bcae9f; --line:#3b342d;
+    --accent:#f28a48; --accent-soft:#3b2a1e; --sky:#1f2a36;
+    --c-red:#ec7a8c; --c-orange:#f2a457; --c-blue:#6ea6dc; --c-green:#8cbf6f;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1c1916; --surface:#272320; --ink:#f3ece4; --muted:#bcae9f; --line:#3b342d;
+  --accent:#f28a48; --accent-soft:#3b2a1e; --sky:#1f2a36;
+  --c-red:#ec7a8c; --c-orange:#f2a457; --c-blue:#6ea6dc; --c-green:#8cbf6f;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.85;padding-bottom:88px}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;line-height:1.45;margin:0;font-weight:700}
+p{margin:0 0 14px}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:8px}
+.wrap{max-width:560px;margin:0 auto;padding:0 20px}
+svg.ico{width:28px;height:28px;flex:0 0 auto}
+.muted{color:var(--muted)}
+.todo{display:inline-block;font-size:12px;line-height:1.6;background:#fff1b8;color:#6b5400;border-radius:6px;padding:0 8px;margin-left:4px;vertical-align:middle;font-weight:700}
+:root[data-theme="dark"] .todo{background:#4a3f12;color:#ffe9a3}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .todo{background:#4a3f12;color:#ffe9a3}}
+
+/* ヘッダー */
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-weight:900;font-size:16px;line-height:1.2}
+.brand small{display:block;font-size:11px;color:var(--muted);font-weight:500}
+.brand .dot{width:26px;height:13px;border-radius:26px 26px 0 0;background:var(--accent)}
+#menuBtn{display:flex;align-items:center;gap:6px;height:42px;padding:0 14px;border:1px solid var(--line);background:var(--surface);border-radius:999px;cursor:pointer;color:var(--ink);font:700 14px var(--font-body)}
+#menuBtn i{display:block;width:16px;height:2px;background:currentColor;box-shadow:0 5px 0 currentColor,0 -5px 0 currentColor}
+nav#menu{position:fixed;inset:58px 0 0 0;background:color-mix(in srgb,var(--bg) 97%,transparent);display:none;z-index:19;overflow:auto}
+nav#menu.open{display:block}
+nav#menu ul{list-style:none;margin:0 auto;padding:12px 20px 40px;max-width:560px;display:grid;gap:10px}
+nav#menu a{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:16px;color:var(--ink);text-decoration:none;font-weight:700;font-size:17px}
+nav#menu a span{display:block;font-size:13px;color:var(--muted);font-weight:400;line-height:1.4}
+nav#menu .ico{color:var(--accent)}
+
+/* ヒーロー */
+.hero{background:linear-gradient(180deg,var(--sky) 0%,var(--accent-soft) 70%,var(--bg) 100%);padding:22px 0 30px}
+.hero-art{display:block;width:100%;height:auto;max-height:230px;margin:0 auto 8px}
+.hero .kicker{display:inline-block;font-size:13px;font-weight:700;color:var(--accent);background:var(--surface);border-radius:999px;padding:2px 12px;margin-bottom:10px}
+.hero h1{font-size:27px;font-weight:900;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.bubble{position:relative;background:var(--surface);border-radius:18px;padding:16px 18px;margin:16px 0;box-shadow:0 6px 18px rgba(120,70,30,.08)}
+.bubble::after{content:"";position:absolute;left:28px;bottom:-10px;border:10px solid transparent;border-top-color:var(--surface);border-bottom:0}
+.bubble p{margin:0}
+.by{display:flex;align-items:center;gap:10px;margin:14px 0 0 12px;font-size:14px;color:var(--muted)}
+.by .face{width:36px;height:36px;border-radius:50%;background:var(--accent);display:grid;place-items:center;color:#fff;font:700 14px var(--font-display)}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:56px;padding:12px 20px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font:700 17px var(--font-body);border:0;cursor:pointer;box-shadow:0 6px 14px color-mix(in srgb,var(--accent) 35%,transparent)}
+.btn.ghost{background:var(--surface);color:var(--accent);border:2px solid var(--accent);box-shadow:none;min-height:50px;font-size:15px}
+
+.illust{display:block;width:100%;height:auto;border-radius:20px;margin:0 0 16px;box-shadow:0 8px 20px rgba(120,70,30,.12)}
+.hero-img{margin:0 0 18px}
+.closing .illust{margin:0 0 6px}
+/* 3ステップの道のり */
+.journey{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0 6px;text-align:center}
+.journey div{background:var(--surface);border-radius:16px;padding:12px 6px;font-size:13px;font-weight:700;line-height:1.5}
+.journey b{display:block;font:900 22px var(--font-display);color:var(--accent);line-height:1.2}
+.journey .ico{display:block;margin:4px auto}
+
+/* セクション共通 */
+section{padding:36px 0}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sec-num{flex:0 0 44px;height:44px;border-radius:14px;background:var(--accent);color:#fff;display:grid;place-items:center;font:900 18px var(--font-display)}
+.sec-head .eyebrow{font-size:13px;color:var(--muted);font-weight:700;line-height:1.3}
+.sec-head h2{font-size:23px}
+.lead{font-size:16px}
+
+/* 今日やること */
+.progress{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 16px;margin:10px 0 16px;position:sticky;top:66px;z-index:5}
+.bar{flex:1;height:12px;background:var(--line);border-radius:12px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--c-orange),var(--c-green));transition:width .35s}
+.count{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;font-size:15px}
+.tasks{display:grid;gap:12px}
+.task{display:grid;grid-template-columns:44px 1fr;gap:12px;background:var(--surface);border:2px solid var(--line);border-radius:18px;padding:16px;transition:border-color .2s,background .2s}
+.task.done{border-color:var(--c-green);background:color-mix(in srgb,var(--c-green) 7%,var(--surface))}
+.task input{appearance:none;-webkit-appearance:none;width:36px;height:36px;margin:2px 0 0;border:2.5px solid var(--line);border-radius:10px;background:var(--surface);display:grid;place-items:center;cursor:pointer}
+.task input:checked{background:var(--c-green);border-color:var(--c-green)}
+.task input:checked::after{content:"";width:11px;height:19px;border:solid #fff;border-width:0 4px 4px 0;transform:translate(0,-2px) rotate(45deg)}
+.task label{display:block;font-weight:700;font-size:18px;line-height:1.5;cursor:pointer}
+.task .why{font-size:15px;color:var(--muted);line-height:1.7;margin:6px 0 0}
+.task .btn{margin-top:12px}
+.tag{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:1px 10px;margin-bottom:6px;color:#fff}
+.tag.buddy{background:var(--c-orange)} .tag.self{background:var(--c-blue)} .tag.office{background:var(--c-green)} .tag.leader{background:var(--c-red)}
+.mini{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:6px}
+.mini li{font-size:14px;background:var(--bg);border-radius:10px;padding:6px 10px;line-height:1.6}
+details.more{margin-top:14px}
+details.more>summary{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:0 18px;background:var(--surface);border:2px dashed var(--line);border-radius:18px;font-weight:700;cursor:pointer;list-style:none}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::after{content:"＋ 開く";color:var(--accent);font-size:14px}
+details.more[open]>summary{margin-bottom:12px}
+details.more[open]>summary::after{content:"− 閉じる"}
+
+/* 初回MS */
+.morning{background:linear-gradient(180deg,#24324a 0%,#4a5d7c 45%,#f3a46b 100%);color:#fff;border-radius:24px;padding:20px 18px 8px;overflow:hidden}
+.morning h3{font-size:18px;margin-bottom:6px}
+.morning .sub{font-size:14px;opacity:.9;margin-bottom:10px}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:12px 0;border-top:1px solid rgba(255,255,255,.25)}
+.tl time{font:900 20px var(--font-display);font-variant-numeric:tabular-nums}
+.tl b{display:block}
+.tl span{font-size:14px;opacity:.92;line-height:1.6}
+.facts{display:grid;gap:10px;margin-top:16px}
+.fact{display:grid;grid-template-columns:36px 1fr;gap:10px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 14px;font-size:15px;line-height:1.7}
+.fact .ico{color:var(--accent)}
+.fact b{display:block;font-size:16px}
+.ok{background:color-mix(in srgb,var(--c-green) 10%,var(--surface));border-color:color-mix(in srgb,var(--c-green) 40%,var(--line))}
+.ok .ico{color:var(--c-green)}
+
+/* サポート */
+.supports{display:grid;gap:12px}
+.sup{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px 16px;border-left:6px solid var(--c)}
+.sup .icon{width:56px;height:56px;border-radius:50%;background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);display:grid;place-items:center}
+.sup .icon svg{width:30px;height:30px}
+.sup b{font:700 18px var(--font-display)}
+.sup em{display:block;font-style:normal;color:var(--c);font-weight:700;font-size:14px;line-height:1.4}
+.sup p{font-size:14px;margin:4px 0 0;line-height:1.6;color:var(--muted)}
+.promise{background:var(--accent-soft);border-radius:20px;padding:18px;margin-top:16px}
+.promise h3{font-size:18px;margin-bottom:10px}
+.promise ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:p}
+.promise li{counter-increment:p;display:grid;grid-template-columns:32px 1fr;gap:10px;align-items:center;font-weight:700}
+.promise li::before{content:counter(p);width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font:900 15px var(--font-display)}
+.promise .note{font-size:14px;color:var(--muted);margin:12px 0 0;font-weight:400}
+
+/* 読み物の区切り */
+.divider{text-align:center;padding:30px 0 10px}
+.divider svg{width:120px;height:auto}
+.divider p{font:700 19px var(--font-display);margin:6px 0 2px}
+.divider small{color:var(--muted);font-size:14px}
+
+/* タイプ選択 */
+.types{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
+.types button{min-height:44px;padding:6px 14px;border-radius:999px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font:700 14px var(--font-body);cursor:pointer}
+.types button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:#fff}
+.answer{background:var(--surface);border:2px solid var(--accent);border-radius:20px;padding:16px 18px}
+.answer h3{font-size:18px;color:var(--accent);margin-bottom:6px}
+.answer p{margin:0;font-size:16px}
+.gains{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.gain{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px;text-align:center}
+.gain .icon{width:52px;height:52px;margin:0 auto 6px;border-radius:16px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.gain .icon svg{width:28px;height:28px}
+.gain h3{font-size:16px}
+.gain p{font-size:13px;margin:4px 0 0;line-height:1.6;color:var(--muted)}
+.note-box{font-size:14px;color:var(--muted);background:var(--bg);border:1px dashed var(--line);border-radius:14px;padding:10px 14px;margin-top:12px}
+
+/* 声 */
+.voices{display:grid;gap:14px;margin-top:8px}
+.voice{display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:start}
+.voice .face{width:48px;height:48px;border-radius:50%;background:var(--sky);color:var(--c-blue);display:grid;place-items:center}
+.voice .text{background:var(--surface);border:1px solid var(--line);border-radius:4px 18px 18px 18px;padding:12px 14px;font-size:15px;line-height:1.75}
+.voice .from{display:block;font-size:12px;color:var(--muted);margin-top:6px}
+
+/* ロードマップ */
+.road{position:relative;margin-top:8px}
+.phase{display:inline-block;font-size:13px;font-weight:700;color:#fff;background:var(--c);border-radius:999px;padding:2px 12px;margin:14px 0 8px}
+.steps{list-style:none;margin:0;padding:0 0 0 22px;border-left:3px dotted var(--line);margin-left:20px;display:grid;gap:10px}
+.steps li{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:10px 14px 10px 16px}
+.steps li::before{content:attr(data-n);position:absolute;left:-41px;top:10px;width:34px;height:34px;border-radius:50%;background:var(--surface);border:3px solid var(--c);color:var(--c);display:grid;place-items:center;font:900 15px var(--font-display)}
+.steps b{font:700 17px var(--font-display)}
+.steps span{display:block;font-size:14px;color:var(--muted);line-height:1.6}
+
+/* FAQ・用語 */
+.terms{display:grid;gap:8px;margin-bottom:18px}
+.term{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px}
+.term b{display:block;font-size:16px}
+.term span{font-size:14px;color:var(--muted);line-height:1.6}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:16px;margin-bottom:10px}
+.faq summary{display:grid;grid-template-columns:28px 1fr 20px;gap:8px;align-items:center;padding:14px 16px;font-weight:700;cursor:pointer;list-style:none;line-height:1.55}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";font:900 18px var(--font-display);color:var(--accent)}
+.faq summary::after{content:"＋";color:var(--muted)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding:0 16px 14px 52px;margin:0;font-size:15px;line-height:1.75}
+
+/* 最後 */
+.help{display:grid;gap:12px}
+.help .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px}
+.help h3{font-size:18px;margin-bottom:4px}
+.closing{background:linear-gradient(180deg,var(--bg) 0%,var(--accent-soft) 100%);text-align:center;padding:36px 0 40px}
+.closing h2{font-size:24px;font-weight:900;margin:10px 0 8px}
+.closing svg{width:180px;height:auto}
+footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
+
+/* 画面下の帯 */
+#dock{position:fixed;left:0;right:0;bottom:0;z-index:18;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+#dock a{display:flex;justify-content:space-between;align-items:center;max-width:520px;margin:0 auto;min-height:54px;padding:0 20px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:16px}
+#dock.complete a{background:var(--c-green)}
+</style>
+</head>
+<body>
+
+<!-- アイコン（オリジナルの簡単な図形） -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.3 3.1 4.5 6.8 4.5c2.1 0 3.6 1.2 4.2 2.4h2c.6-1.2 2.1-2.4 4.2-2.4 3.7 0 5.9 3.8 4.4 7.3C19.5 16.4 12 21 12 21z"/></symbol>
+  <symbol id="i-pair" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="8" cy="7" r="3.2"/><circle cx="16.5" cy="7.5" r="2.8"/><path d="M1.8 19c0-3.7 2.8-6.3 6.2-6.3s6.2 2.6 6.2 6.3z"/><path d="M13.6 19c.1-1.9-.5-3.6-1.6-4.9.9-.8 2.4-1.4 4.5-1.4 3.1 0 5.7 2.4 5.7 6.3z"/></g></symbol>
+  <symbol id="i-team" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="6.5" r="3"/><circle cx="5" cy="9" r="2.4"/><circle cx="19" cy="9" r="2.4"/><path d="M6.5 20c0-3.6 2.4-6.2 5.5-6.2s5.5 2.6 5.5 6.2z"/><path d="M.8 19.5c0-2.8 1.8-4.8 4.2-4.8 1 0 1.8.3 2.4.8-.9 1.1-1.5 2.4-1.7 4z"/><path d="M23.2 19.5c0-2.8-1.8-4.8-4.2-4.8-1 0-1.8.3-2.4.8.9 1.1 1.5 2.4 1.7 4z"/></g></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path fill="currentColor" d="M5 2.5h2v19H5zM8 3.5h11.5l-2.8 4.2 2.8 4.3H8z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M4 12.5l5 5L20 6.5"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="currentColor"><path d="M4 17a8 8 0 0116 0z"/><rect x="2" y="18.5" width="20" height="2" rx="1"/><rect x="11" y="3" width="2" height="4" rx="1"/><rect x="3.6" y="7.6" width="2" height="4" rx="1" transform="rotate(-45 4.6 9.6)"/><rect x="18.4" y="7.6" width="2" height="4" rx="1" transform="rotate(45 19.4 9.6)"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="currentColor" d="M4 4h16a2 2 0 012 2v9a2 2 0 01-2 2H10l-5 4v-4H4a2 2 0 01-2-2V6a2 2 0 012-2z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5c3-1.2 6-1.2 8 .6V20c-2-1.6-5-1.6-8-.4zM21 5c-3-1.2-6-1.2-8 .6V20c2-1.6 5-1.6 8-.4z"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7zm0 4.2A2.8 2.8 0 1012 11.8 2.8 2.8 0 0012 6.2z"/></symbol>
+  <symbol id="i-shirt" viewBox="0 0 24 24"><path fill="currentColor" d="M8 3l4 2.5L16 3l6 3.5-2.5 4-2-1V21h-11V9.5l-2 1L2 6.5z"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path fill="currentColor" d="M16.5 3.5l4 4L9 19l-5 1 1-5z"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><path fill="currentColor" d="M3 8h14v6a5 5 0 01-5 5H8a5 5 0 01-5-5zM17 9.5h1.5a2.5 2.5 0 010 5H17v-2h1.5a.5.5 0 000-1H17zM3 20.5h14v1.5H3z"/></symbol>
+  <symbol id="i-q" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 110 20 10 10 0 010-20zm0 14.2a1.3 1.3 0 100 2.6 1.3 1.3 0 000-2.6zM12 6c-2.2 0-3.8 1.4-3.9 3.4h2.2c.1-.9.8-1.5 1.7-1.5s1.6.6 1.6 1.4c0 .7-.4 1.1-1.3 1.7-1.1.7-1.6 1.4-1.5 2.8V14h2.1v-.3c0-.8.3-1.2 1.2-1.8 1.1-.7 1.8-1.6 1.8-2.9C16.1 7.3 14.5 6 12 6z"/></symbol>
+  <symbol id="i-person" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7.5 8-7.5s8 3.1 8 7.5z"/></g></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3zm5 3.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9zm0 2a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM17.3 5.5a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><span class="dot" aria-hidden="true"></span><div>新入会員ナビ<small>大阪中央区倫理法人会</small></div></div>
+    <button id="menuBtn" type="button" aria-expanded="false" aria-controls="menu"><i aria-hidden="true"></i><span id="menuLabel">目次</span></button>
+  </div>
+</header>
+<nav id="menu" aria-label="目次">
+  <ul>
+    <li><a href="#today"><svg class="ico"><use href="#i-check"/></svg><div>今日やること<span>登録とチェックリスト</span></div></a></li>
+    <li><a href="#first-ms"><svg class="ico"><use href="#i-sun"/></svg><div>はじめての金曜の朝<span>当日の流れ・服装・持ち物</span></div></a></li>
+    <li><a href="#support"><svg class="ico"><use href="#i-pair"/></svg><div>一人にしない仕組み<span>誰に聞けばいい？</span></div></a></li>
+    <li><a href="#value"><svg class="ico"><use href="#i-heart"/></svg><div>中央区で手に入るもの<span>先輩たちの変化</span></div></a></li>
+    <li><a href="#roadmap"><svg class="ico"><use href="#i-map"/></svg><div>これからの歩み<span>成長ロードマップ</span></div></a></li>
+    <li><a href="#basics"><svg class="ico"><use href="#i-q"/></svg><div>よくある不安<span>言葉の意味・Q&amp;A</span></div></a></li>
+    <li><a href="#help"><svg class="ico"><use href="#i-chat"/></svg><div>今週の案内・困ったとき<span>連絡先</span></div></a></li>
+  </ul>
+</nav>
+
+<main>
+<!-- ようこそ -->
+<section class="hero" id="welcome">
+  <div class="wrap">
+    <img class="illust hero-img" src="hero.webp" width="960" height="640" alt="朝日の大阪の街で、新しく入会した人を先輩の会員が握手で迎えているイラスト">
+    <span class="kicker">ご入会おめでとうございます</span>
+    <h1>ようこそ、大阪中央区へ。<br><em>金曜の朝</em>から、<br>新しい毎日が始まります。</h1>
+    <div class="bubble">
+      <p>「応援し、応援される中央区」。<br>新しい仲間のあなたを、全員で応援します。<br>まずは一緒に、金曜の朝を迎えましょう。</p>
+    </div>
+    <div class="by"><span class="face" aria-hidden="true">会長</span>会長 尼崎 錬一<span class="todo">文面は仮</span></div>
+
+    <div class="journey" aria-label="これからの3ステップ">
+      <div><b>1</b><svg class="ico" style="color:var(--c-orange)"><use href="#i-check"/></svg>今日の登録</div>
+      <div><b>2</b><svg class="ico" style="color:var(--accent)"><use href="#i-sun"/></svg>金曜の朝に参加</div>
+      <div><b>3</b><svg class="ico" style="color:var(--c-green)"><use href="#i-pair"/></svg>仲間とつながる</div>
+    </div>
+    <p class="muted" style="font-size:14px;text-align:center;margin:8px 0 16px">あなたには最初の相談相手「バディ」がつきます。<br>お名前は入会時にお伝えします。</p>
+    <a class="btn" href="#today">今日やることを始める</a>
+  </div>
+</section>
+
+<!-- 1 今日やること -->
+<section id="today">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">1</div><div><div class="eyebrow">入会初日</div><h2>今日やること</h2></div></div>
+    <p class="lead">バディと会えた方は、その場で一緒に。<br>会えなかった方も、上から順に進めればOKです。</p>
+    <div class="progress" aria-live="polite"><div class="bar"><i id="barFill"></i></div><div class="count" id="countText">0 / 8 完了</div></div>
+
+    <div class="tasks">
+      <div class="task" data-task>
+        <input type="checkbox" id="t1" aria-describedby="t1d">
+        <div>
+          <span class="tag buddy">バディと</span>
+          <label for="t1">バディとLINEで友だちになる</label>
+          <p class="why" id="t1d">困ったときの連絡先ができます。会えた方はその場でQRコードを交換。会えなかった方は、紹介者からバディの連絡先を受け取ってください。</p>
+        </div>
+      </div>
+      <div class="task" data-task>
+        <input type="checkbox" id="t2" aria-describedby="t2d">
+        <div>
+          <span class="tag buddy">バディの招待で</span>
+          <label for="t2">グループLINEに2つ参加する</label>
+          <ul class="mini">
+            <li><b>大好きLINE</b>：（届く情報・返信が必要か）<span class="todo">要記入</span></li>
+            <li><b>明るく朗らかLINE</b>：（届く情報・返信が必要か）<span class="todo">要記入</span></li>
+          </ul>
+          <p class="why" id="t2d">バディから招待が届いたら「参加」を押せば完了です。通知が多ければ、トークごとに通知をオフにして大丈夫です。</p>
+        </div>
+      </div>
+      <div class="task" data-task>
+        <input type="checkbox" id="t3" aria-describedby="t3d">
+        <div>
+          <span class="tag self">自分で</span>
+          <label for="t3">はじめて参加する金曜日を決めて、バディに伝える</label>
+          <p class="why" id="t3d">日にちが決まると、前日にバディから連絡が来て、当日は受付で待っています。</p>
+          <a class="btn ghost" href="#first-ms">当日の流れを見る</a>
+        </div>
+      </div>
+    </div>
+
+    <details class="more" id="moreTasks">
+      <summary>そのほかの準備（5つ）</summary>
+      <div class="tasks">
+        <div class="task" data-task>
+          <input type="checkbox" id="t4">
+          <div>
+            <span class="tag buddy">バディと</span>
+            <label for="t4">すまっぽんを登録する</label>
+            <p class="why">会のスマホ用ポータルです。予定や資料をここで見られます。</p>
+            <a class="btn ghost" href="#t4" aria-disabled="true">すまっぽんを開く<span class="todo">URL準備中</span></a>
+          </div>
+        </div>
+        <div class="task" data-task>
+          <input type="checkbox" id="t5">
+          <div>
+            <span class="tag leader">担当者が手配</span>
+            <label for="t5">副専任幹事・チームリーダーにあいさつする</label>
+            <p class="why">初参加の日に、バディが紹介します。一言目は「今日からお世話になります、○○です」で十分です。</p>
+          </div>
+        </div>
+        <div class="task" data-task>
+          <input type="checkbox" id="t6">
+          <div>
+            <span class="tag self">自分で</span>
+            <label for="t6">会のInstagramをフォローする</label>
+            <p class="why">毎週の様子や講話者の紹介が見られます。行けなかった週の雰囲気もわかります。</p>
+            <a class="btn ghost" href="https://www.instagram.com/osaka.chuouku_rinri/" target="_blank" rel="noopener"><svg class="ico" style="width:20px;height:20px"><use href="#i-insta"/></svg>@osaka.chuouku_rinri を開く</a>
+          </div>
+        </div>
+        <div class="task" data-task>
+          <input type="checkbox" id="t7">
+          <div>
+            <span class="tag office">事務局の案内で</span>
+            <label for="t7">倫理アプリを登録する</label>
+            <p class="why">倫理法人会の公式アプリです。事務局での登録が済むと案内が届くので、その手順どおりに進めてください。</p>
+          </div>
+        </div>
+        <div class="task" data-task>
+          <input type="checkbox" id="t8">
+          <div>
+            <span class="tag leader">リーダーの招待で</span>
+            <label for="t8">所属チームのグループLINEに参加する</label>
+            <p class="why">チームリーダーから招待が届きます。「参加」を押せば完了です。</p>
+          </div>
+        </div>
+      </div>
+    </details>
+    <p class="muted" style="font-size:13px;margin-top:12px">チェックはこのスマホにだけ記録されます。途中で止まったら、バディに「ここで止まっています」と送ってください。</p>
+  </div>
+</section>
+
+<!-- 2 はじめての金曜の朝 -->
+<section id="first-ms">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">2</div><div><div class="eyebrow">毎週金曜日</div><h2>はじめての金曜の朝</h2></div></div>
+    <img class="illust" src="morning.webp" width="960" height="640" loading="lazy" alt="朝の会場で講話を聞く会員たち。新入会員とバディが隣に座っているイラスト">
+    <div class="morning">
+      <h3>当日の流れ</h3>
+      <p class="sub">夜明け前の街から、朝日の中へ。</p>
+      <ol class="tl">
+        <li><time>5:50</time><div><b>受付でバディと合流</b><span>時刻と場所は、前日にバディから届きます。</span></div></li>
+        <li><time>6:00</time><div><b>活力朝礼</b><span>あいさつと小冊子の読み合わせ。周りに合わせれば大丈夫。</span></div></li>
+        <li><time>6:30</time><div><b>モーニングセミナー</b><span>講話者の話を聞きます。メモを取る方が多いです。</span></div></li>
+        <li><time>その後</time><div><b>朝食会</b><span>バディが隣に座ります。会員と話せる時間です。</span></div></li>
+      </ol>
+    </div>
+    <div class="facts">
+      <div class="fact"><svg class="ico"><use href="#i-map"/></svg><div><b>会場</b>（会場名と住所）<span class="todo">要記入</span></div></div>
+      <div class="fact"><svg class="ico"><use href="#i-shirt"/></svg><div><b>服装</b>（会の目安）<span class="todo">要確認</span></div></div>
+      <div class="fact"><svg class="ico"><use href="#i-pen"/></svg><div><b>持ち物</b>筆記用具。小冊子『職場の教養』の受け取り方 <span class="todo">要確認</span></div></div>
+      <div class="fact ok"><svg class="ico"><use href="#i-heart"/></svg><div><b>行けなくなっても大丈夫</b>バディに一言送るだけでOK。休んだ翌週こそ、顔を見せてくれるとみんな喜びます。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 一人にしない仕組み -->
+<section id="support">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">3</div><div><div class="eyebrow">あなたを支える</div><h2>一人にしない、4つのサポート</h2></div></div>
+    <img class="illust" src="breakfast.webp" width="960" height="640" loading="lazy" alt="朝食会の丸テーブルで、新入会員が仲間と笑い合っているイラスト">
+    <div class="supports">
+      <div class="sup" style="--c:var(--c-red)"><div class="icon"><svg><use href="#i-heart"/></svg></div><div><b>紹介者</b><em>安心を与える</em><p>最初の不安を取り除き、安心して参加できるよう支えます。</p></div></div>
+      <div class="sup" style="--c:var(--c-orange)"><div class="icon"><svg><use href="#i-pair"/></svg></div><div><b>バディ</b><em>居場所をつくる</em><p>最初の仲間として一緒に参加し、つながりを手伝います。</p></div></div>
+      <div class="sup" style="--c:var(--c-blue)"><div class="icon"><svg><use href="#i-team"/></svg></div><div><b>Bチーム</b><em>情報共有とフォローで支える</em><p>オリエンテーションや面談で、継続してサポートします。</p></div></div>
+      <div class="sup" style="--c:var(--c-green)"><div class="icon"><svg><use href="#i-flag"/></svg></div><div><b>所属チーム</b><em>継続と成長を支える</em><p>日々の活動を通して、安心して参加できる場をつくります。</p></div></div>
+    </div>
+    <div class="promise">
+      <h3>バディの3つの約束</h3>
+      <ol>
+        <li>初参加の前日に、こちらから連絡します</li>
+        <li>当日は、受付で待っています</li>
+        <li>朝食会では、隣に座ります</li>
+      </ol>
+      <p class="note">バディが来られない日は、Bチームが代わりの担当を決めてお知らせします。</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider">
+  <svg viewBox="0 0 120 40" aria-hidden="true"><circle cx="60" cy="40" r="22" fill="#ffb877"/><rect x="0" y="38" width="120" height="2" rx="1" fill="#e9cdb3"/><rect x="58" y="4" width="4" height="9" rx="2" fill="#f2a157"/><rect x="30" y="14" width="4" height="9" rx="2" fill="#f2a157" transform="rotate(-40 32 18)"/><rect x="86" y="14" width="4" height="9" rx="2" fill="#f2a157" transform="rotate(40 88 18)"/></svg>
+  <p>ここから下は、ゆっくり読む場所です</p>
+  <small>時間のあるときに、少しずつどうぞ。</small>
+</div>
+
+<!-- 4 中央区で手に入るもの -->
+<section id="value">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">4</div><div><div class="eyebrow">入会した理由に合わせて</div><h2>中央区で手に入るもの</h2></div></div>
+    <p class="lead">あなたが入会した理由は、どれに近いですか？<br>タップしてみてください。</p>
+    <div class="types" role="group" aria-label="入会した理由">
+      <button type="button" data-type="0" aria-pressed="true">経営の軸を整えたい</button>
+      <button type="button" data-type="1" aria-pressed="false">相談できる仲間がほしい</button>
+      <button type="button" data-type="2" aria-pressed="false">朝の習慣をつくりたい</button>
+      <button type="button" data-type="3" aria-pressed="false">会社を継ぐ・継いだ</button>
+      <button type="button" data-type="4" aria-pressed="false">社員に学ぶ場を</button>
+    </div>
+    <div class="answer" aria-live="polite"><h3 id="ansTitle"></h3><p id="ansText"></p></div>
+
+    <div class="gains">
+      <div class="gain"><div class="icon"><svg><use href="#i-book"/></svg></div><h3>学びを行動に</h3><p>毎週ひとつ持ち帰り、翌日に試す</p></div>
+      <div class="gain"><div class="icon"><svg><use href="#i-pair"/></svg></div><h3>本音で話せる仲間</h3><p>業種も年代も違う経営者と同じ朝を</p></div>
+      <div class="gain"><div class="icon"><svg><use href="#i-sun"/></svg></div><h3>朝の習慣</h3><p>週一度の早起きが、一週間を整える</p></div>
+      <div class="gain"><div class="icon"><svg><use href="#i-heart"/></svg></div><h3>人としての信用</h3><p>続けるうちに人柄が伝わっていく</p></div>
+    </div>
+    <p class="note-box">ここは商売の場ではありません。信頼が積み重なった先に、仕事のご縁が生まれることがあります。</p>
+
+    <h3 style="font-size:19px;margin:28px 0 12px">先輩たちの変化</h3>
+    <div class="voices">
+      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">（中央区の会員の声：入会前の悩み → 続けて変わったこと）<span class="from">○○業・入会○年目 <span class="todo">本人の許可を得て掲載</span></span></div></div>
+      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">（中央区の会員の声）<span class="from">○○業・入会○年目 <span class="todo">本人の許可を得て掲載</span></span></div></div>
+      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">他の地域では、社内で勉強会を続けていた会社の社長が入会し、学びを社内の取り組みに生かしています。夫婦の関係を見つめ直したことで苦しい時期を乗り越えた、という会長の話もあります。<span class="from">他の地域の会員インタビューより要約（coki.jp）</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 ロードマップ -->
+<section id="roadmap">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">5</div><div><div class="eyebrow">これからの歩み</div><h2>あなたの成長ロードマップ</h2></div></div>
+    <p class="lead">9つの段階は、あなたの「状態」です。<br>期間は目安。早い・遅いはありません。</p>
+    <div class="road">
+      <span class="phase" style="--c:var(--c-red)">はじめの1か月ほど</span>
+      <ol class="steps" style="--c:var(--c-red)">
+        <li data-n="1"><b>安心する</b><span>まずは安心して参加することから。</span></li>
+        <li data-n="2"><b>知る</b><span>倫理法人会や中央区、活動の流れを知ります。</span></li>
+      </ol>
+      <span class="phase" style="--c:var(--c-orange)">3か月ほど</span>
+      <ol class="steps" style="--c:var(--c-orange)">
+        <li data-n="3"><b>話す</b><span>会長や会員と話し、思いや考えを共有します。</span></li>
+        <li data-n="4"><b>つながる</b><span>会員とつながり、人間関係を広げます。</span></li>
+        <li data-n="5"><b>楽しむ</b><span>お茶会やイベントで、活動の幅を広げます。</span></li>
+      </ol>
+      <span class="phase" style="--c:var(--c-blue)">半年ほど</span>
+      <ol class="steps" style="--c:var(--c-blue)">
+        <li data-n="6"><b>仲間をつくる</b><span>一緒に活動できる人を増やします。</span></li>
+        <li data-n="7"><b>居場所をつくる</b><span>ここに来ると安心できる場所になります。</span></li>
+      </ol>
+      <span class="phase" style="--c:var(--c-green)">1年ほどから</span>
+      <ol class="steps" style="--c:var(--c-green)">
+        <li data-n="8"><b>自立する</b><span>自分らしい実践を見つけ、自信を持って動けます。</span></li>
+        <li data-n="9"><b>貢献する</b><span>学んだことを、仲間や地域のために生かします。</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 6 よくある不安 -->
+<section id="basics">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">6</div><div><div class="eyebrow">はじめての方へ</div><h2>言葉の意味と、よくある不安</h2></div></div>
+    <div class="terms">
+      <div class="term"><b>MS（モーニングセミナー）</b><span>毎週金曜6:30から、講話者の話を聞く場です。</span></div>
+      <div class="term"><b>活力朝礼</b><span>MSの前の朝礼。あいさつと小冊子の読み合わせ。</span></div>
+      <div class="term"><b>職場の教養</b><span>毎日1ページ読む小冊子。会社の朝礼で使う会員も多くいます。</span></div>
+      <div class="term"><b>万人幸福の栞</b><span>倫理の考え方をまとめた本。少しずつ読めば大丈夫です。</span></div>
+      <div class="term"><b>単会</b><span>地域ごとの会のこと。ここは「大阪中央区」の単会です。</span></div>
+    </div>
+    <div class="faq">
+      <details><summary>毎週は行けそうにありません</summary><p>行ける週だけで大丈夫です。行けない週はバディに一言送ってください。Instagramで様子を見ておくと、次に行ったとき話に入りやすくなります。</p></details>
+      <details><summary>知り合いがいなくて不安です</summary><p>当日はバディが受付で待ち、朝食会でも隣に座ります。一人の時間をつくらないようにしています。</p></details>
+      <details><summary>自分の仕事の話をしてもいいですか？</summary><p>自己紹介でお仕事を話すのは大丈夫です。会の中での宣伝や売り込みは、規程で禁止されています。</p></details>
+      <details><summary>会費や手続きのことを知りたい</summary><p>事務局にお問い合わせください。（問い合わせ先）<span class="todo">要記入</span></p></details>
+      <details><summary>何を聞けばいいかわかりません</summary><p>「次の金曜、何時にどこへ行けばいいですか？」の一言からで十分です。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 7 今週の案内・困ったとき -->
+<section id="help">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">7</div><div><div class="eyebrow">いつでもここへ</div><h2>今週の案内・困ったとき</h2></div></div>
+    <div class="help">
+      <div class="card"><h3>今週のモーニングセミナー</h3><p class="muted" style="margin:0">（講話者・テーマ・日付）<span class="todo">更新方法を決める</span></p></div>
+      <div class="card"><h3>困ったとき</h3><p style="margin:0">まずはバディへLINEで一言。<br>返事がないときは、Bチームの担当（お名前）へ。<span class="todo">要記入</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <img class="illust" src="welcome.webp" width="960" height="640" loading="lazy" alt="夜明けの道を歩く新入会員を、会場の前で仲間が手を振って迎えているイラスト">
+    <h2>まずは、次の金曜の朝に。</h2>
+    <p class="muted">会場で、バディと仲間が待っています。</p>
+    <a class="btn" href="#today">今日やることに戻る</a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">大阪中央区倫理法人会 新入会員ナビ（試作版）<br>黄色の札の箇所は、運営で確認してから差し替えます。</div></footer>
+
+<div id="dock"><a id="dockLink" href="#today"><span id="dockText">今日やること あと8つ</span><span aria-hidden="true">→</span></a></div>
+
+<script>
+(function(){
+  var KEY = "chuo-navi-checks-v1";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll("[data-task] input[type=checkbox]"));
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch(e) { state = {}; }
+  function render(){
+    var done = 0;
+    boxes.forEach(function(b){ b.closest("[data-task]").classList.toggle("done", b.checked); if (b.checked) done++; });
+    var total = boxes.length, left = total - done;
+    document.getElementById("barFill").style.width = (done/total*100) + "%";
+    document.getElementById("countText").textContent = done + " / " + total + " 完了";
+    var dock = document.getElementById("dock"), link = document.getElementById("dockLink"), text = document.getElementById("dockText");
+    if (left === 0) { dock.classList.add("complete"); text.textContent = "準備完了！次は金曜の朝へ"; link.setAttribute("href", "#first-ms"); }
+    else { dock.classList.remove("complete"); text.textContent = "今日やること あと" + left + "つ"; link.setAttribute("href", "#today"); }
+  }
+  boxes.forEach(function(b){
+    b.checked = !!state[b.id];
+    b.addEventListener("change", function(){
+      state[b.id] = b.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e) {}
+      render();
+    });
+  });
+  if (["t1","t2","t3"].every(function(id){ return state[id]; })) document.getElementById("moreTasks").open = true;
+  render();
+
+  // 目次
+  var btn = document.getElementById("menuBtn"), menu = document.getElementById("menu"), lbl = document.getElementById("menuLabel");
+  function setMenu(open){ menu.classList.toggle("open", open); btn.setAttribute("aria-expanded", open ? "true" : "false"); lbl.textContent = open ? "閉じる" : "目次"; document.body.style.overflow = open ? "hidden" : ""; }
+  btn.addEventListener("click", function(){ setMenu(!menu.classList.contains("open")); });
+  menu.addEventListener("click", function(e){ if (e.target.closest("a")) setMenu(false); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") setMenu(false); });
+  document.querySelectorAll('a[aria-disabled="true"]').forEach(function(a){ a.addEventListener("click", function(e){ e.preventDefault(); }); });
+
+  // 入会した理由
+  var answers = [
+    ["経営の軸が、毎週の朝に整っていきます", "迷ったときに立ち返る考え方を、毎週の講話と小冊子から一つずつ持ち帰れます。翌日に一つ試すことで、判断の軸が自分の言葉になっていきます。"],
+    ["立場の違う経営者と、本音で話せます", "同じ業界でも取引先でもない経営者だから話せることがあります。朝食会やチームの集まりで、少しずつ相談できる相手が増えていきます。"],
+    ["週に一度の早起きが、リズムをつくります", "金曜の朝6時に集まる仲間がいると、早起きが続きやすくなります。朝の時間の使い方が変わったという会員も多くいます。"],
+    ["先を行く経営者と、同じ朝を過ごせます", "継ぐ立場の悩みを経験してきた先輩経営者がいます。講話や朝食会で、自分より少し先を歩く人の話を直接聞けます。"],
+    ["会社の外に、学びの場を持てます", "幹部や社員が参加すると、会社の中では伝えにくい考え方に触れられます。小冊子『職場の教養』を会社の朝礼で使う会員もいます。"]
+  ];
+  var tbtns = Array.prototype.slice.call(document.querySelectorAll(".types button"));
+  function showType(i){
+    tbtns.forEach(function(b, j){ b.setAttribute("aria-pressed", i === j ? "true" : "false"); });
+    document.getElementById("ansTitle").textContent = answers[i][0];
+    document.getElementById("ansText").textContent = answers[i][1];
+  }
+  tbtns.forEach(function(b, i){ b.addEventListener("click", function(){ showType(i); }); });
+  showType(0);
+})();
+</script>
+</body>
+</html>
