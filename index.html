@@ -218,6 +218,11 @@ details.more[open]>summary::after{content:"− 閉じる"}
 .book img{width:96px;height:auto;border-radius:8px}
 .book b{display:block;font-size:16px}
 .book span{display:block;font-size:14px;color:var(--muted);line-height:1.65}
+.week{background:var(--surface);border:2px solid var(--accent);border-radius:18px;padding:14px 16px;margin-top:16px}
+.week small{display:block;font-size:12px;color:var(--accent);font-weight:700}
+.week b{display:block;font-size:17px}
+.week span{display:block;font-size:14px;color:var(--muted)}
+.credit{display:block;font-size:11px;color:var(--muted);margin-top:4px}
 /* FAQ・用語 */
 .terms{display:grid;gap:8px;margin-bottom:18px}
 .term{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px}
@@ -341,7 +346,9 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
         <div>
           <span class="tag self">自分で</span>
           <label for="t3">はじめて参加する金曜日を決めて、バディに伝える</label>
-          <p class="why" id="t3d">日にちが決まると、前日にバディから連絡が来て、当日は受付で待っています。</p>
+          <p class="why" id="t3d">日にちが決まったら、バディにLINEで一言送ってください。前日にバディから連絡が来て、当日は受付で待っています。</p>
+          <a class="btn" href="https://line.me/R/share?text=%E3%81%8A%E7%96%B2%E3%82%8C%E3%81%95%E3%81%BE%E3%81%A7%E3%81%99%E3%80%82%E2%97%8B%E6%9C%88%E2%97%8B%E6%97%A5%EF%BC%88%E9%87%91%EF%BC%89%E3%81%AE%E3%83%A2%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC%E3%81%AB%E5%88%9D%E3%82%81%E3%81%A6%E5%8F%82%E5%8A%A0%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%E3%82%88%E3%82%8D%E3%81%97%E3%81%8F%E3%81%8A%E9%A1%98%E3%81%84%E3%81%97%E3%81%BE%E3%81%99%E3%80%82" target="_blank" rel="noopener">バディにLINEで伝える</a>
+          <p class="why" style="font-size:13px">押すとLINEが開きます。送り先にバディを選び、○の日付を直して送信してください。</p>
           <a class="btn ghost" href="#first-ms">当日の流れを見る</a>
         </div>
       </div>
@@ -413,8 +420,9 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
         <li><time>その後</time><div><b>朝食会</b><span>バディが隣に座ります。会員と話せる時間です。</span></div></li>
       </ol>
     </div>
+    <div class="week"><small>今週の金曜のモーニングセミナー</small><b>○月○日（金）講話者：○○○○ 氏</b><span>テーマ：「○○○○」</span><span class="todo">毎週更新・更新方法を決める</span></div>
     <div class="facts">
-      <div class="fact"><svg class="ico"><use href="#i-map"/></svg><div><b>会場</b>（会場名と住所）<span class="todo">要記入</span></div></div>
+      <div class="fact"><svg class="ico"><use href="#i-map"/></svg><div><b>会場</b>（会場名と住所）<span class="todo">要記入</span><br><a href="#first-ms" aria-disabled="true">地図を開く（URL準備中）</a></div></div>
       <div class="fact"><svg class="ico"><use href="#i-shirt"/></svg><div><b>服装</b>（会の目安）<span class="todo">要確認</span></div></div>
       <div class="fact"><svg class="ico"><use href="#i-pen"/></svg><div><b>持ち物</b>筆記用具。小冊子『職場の教養』の受け取り方 <span class="todo">要確認</span></div></div>
       <div class="fact ok"><svg class="ico"><use href="#i-heart"/></svg><div><b>行けなくなっても大丈夫</b>バディに一言送るだけでOK。休んだ翌週こそ、顔を見せてくれるとみんな喜びます。</div></div>
@@ -456,7 +464,7 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
   <div class="wrap">
     <div class="sec-head"><div class="sec-num">4</div><div><div class="eyebrow">あなたが入った会のこと</div><h2>倫理法人会とは</h2></div></div>
     <div class="slogan"><small>倫理法人会のスローガン</small>企業に倫理を<br>職場に心を<br>家庭に愛を</div>
-    <p class="lead">経営者が「倫理」、つまり人として正しく、明るく生きる法則を学び、仕事と家庭で実践する会です。宗教団体でも政治団体でもありません。会の中での商売や勧誘も、規程で禁止されています。</p>
+    <p class="lead">経営者が、日々の行動や人との関わり方を学び、仕事と家庭で一つずつ実践していく会です。宗教団体でも政治団体でもありません。会の中での商売や勧誘も、規程で禁止されています。</p>
 
     <h3 class="sub-h">何を目的にしている会？</h3>
     <div class="card-plain">
@@ -466,12 +474,12 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
 
     <h3 class="sub-h">どんな規模？</h3>
     <div class="stats">
-      <div class="stat"><b>8万社</b><span>全国の倫理法人会が<br>目指している体制</span></div>
-      <div class="stat"><b>4,750社</b><span>大阪府倫理法人会の会員数<br>（令和8年5月時点）</span></div>
-      <div class="stat"><b>35単会</b><span>大阪府内で目指す<br>地域の会の数（令和9年度）</span></div>
-      <div class="stat"><b>180社</b><span>大阪中央区が目指す会員数<br>（2027年8月）</span></div>
+      <div class="stat"><b>7万5千社</b><span>全国で倫理経営を<br>学んでいる企業</span></div>
+      <div class="stat"><b>4,750社</b><span>大阪府倫理法人会の会員<br>（令和8年5月時点）</span></div>
+      <div class="stat"><b>○○社</b><span>大阪中央区の今の会員<br><span class="todo">要記入</span></span></div>
+      <div class="stat"><b>180社</b><span>大阪中央区の目標<br>（2027年8月）</span></div>
     </div>
-    <p class="from-note">出典：令和9年度 倫理法人会活動方針、大阪府倫理法人会 会長メッセージ・普及目標。地域ごとの会（単会）は、全国の各都道府県の中にあります。</p>
+    <p class="from-note">出典：全国＝倫理研究所 公式サイト、大阪府＝大阪府倫理法人会 令和9年度 会長メッセージ。全国では8万社の体制を、大阪府では令和9年度に5,050社・35単会を目指しています。</p>
 
     <h3 class="sub-h">どんな会とつながっている？</h3>
     <div class="tree">
@@ -517,9 +525,9 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
     <div class="gains">
       <div class="gain"><div class="icon"><svg><use href="#i-book"/></svg></div><h3>学びを行動に</h3><p>毎週ひとつ持ち帰り、翌日に試す</p></div>
       <div class="gain"><div class="icon"><svg><use href="#i-pair"/></svg></div><h3>本音で話せる仲間</h3><p>業種も年代も違う経営者と同じ朝を</p></div>
-      <div class="gain"><div class="icon"><svg><use href="#i-sun"/></svg></div><h3>朝の習慣</h3><p>週一度の早起きが、一週間を整える</p></div>
+      <div class="gain"><div class="icon"><svg><use href="#i-sun"/></svg></div><h3>朝の習慣</h3><p>金曜の朝を、自分を振り返る時間に</p></div>
       <div class="gain"><div class="icon"><svg><use href="#i-heart"/></svg></div><h3>人としての信用</h3><p>続けるうちに人柄が伝わっていく</p></div>
-      <div class="gain"><div class="icon"><svg><use href="#i-team"/></svg></div><h3>家庭・身近な人</h3><p>家族への言葉と表情が変わっていく</p></div>
+      <div class="gain"><div class="icon"><svg><use href="#i-team"/></svg></div><h3>家庭・身近な人</h3><p>家族との関わり方を見つめ直すきっかけに</p></div>
       <div class="gain"><div class="icon"><svg><use href="#i-person"/></svg></div><h3>自分自身と向き合う</h3><p>週に一度、立ち止まって振り返る</p></div>
     </div>
     <p class="note-box">ここは商売の場ではありません。信頼が積み重なった先に、仕事のご縁が生まれることがあります。</p>
@@ -572,14 +580,12 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
     <div class="sec-head"><div class="sec-num">7</div><div><div class="eyebrow">はじめての方へ</div><h2>2冊の本と、よくある不安</h2></div></div>
     <h3 style="font-size:19px;margin:0 0 10px">手元に届く2冊</h3>
     <div class="books">
-      <div class="book"><div class="book-photo" role="img" aria-label="写真の差し替え枠">写真<br>（実物を撮影して差し替え）</div><div><b>『万人幸福の栞（しおり）』</b><span>倫理法人会の考え方のもとになる本。丸山敏雄 著、倫理研究所 発行。17か条の短い教えが並んでいます。<br>読み方：1日1条ずつ、声に出して読む会員が多くいます。</span></div></div>
+      <div class="book"><a href="https://www.rinri-jpn.or.jp/ec/html/products/detail/459" target="_blank" rel="noopener"><img src="https://www.rinri-jpn.or.jp/ec/html/html/upload/save_image/0129111001_697ac179703d0.jpg" width="96" height="138" loading="lazy" alt="『万人幸福の栞』の表紙"></a><div><b>『万人幸福の栞（しおり）』</b><span>倫理法人会の考え方のもとになる本。丸山敏雄 著、倫理研究所 発行。17か条の短い教えが並んでいます。<br>読み方：1日1条ずつ読み、気になった言葉を一つ実践してみる。<br><small class="credit">画像：倫理研究所 オンラインストア「倫理の本棚」より（仮掲載）</small></span></div></div>
       <div class="book"><div class="book-photo" role="img" aria-label="写真の差し替え枠">写真<br>（実物を撮影して差し替え）</div><div><b>『職場の教養』</b><span>1日1ページの小冊子。会員に毎月贈られます。活力朝礼で読み合わせるほか、会社の朝礼で使う会員もいます。<br>読み方：その日のページを読み、「今日の心がけ」を一つ実行する。</span></div></div>
     </div>
     <div class="terms">
       <div class="term"><b>MS（モーニングセミナー）</b><span>毎週金曜6:30から、講話者の話を聞く場です。</span></div>
       <div class="term"><b>活力朝礼</b><span>MSの前の朝礼。あいさつと小冊子の読み合わせ。</span></div>
-      <div class="term"><b>職場の教養</b><span>毎日1ページ読む小冊子。会社の朝礼で使う会員も多くいます。</span></div>
-      <div class="term"><b>万人幸福の栞</b><span>倫理の考え方をまとめた本。少しずつ読めば大丈夫です。</span></div>
       <div class="term"><b>単会</b><span>地域ごとの会のこと。ここは「大阪中央区」の単会です。</span></div>
     </div>
     <div class="faq">
@@ -597,7 +603,7 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
   <div class="wrap">
     <div class="sec-head"><div class="sec-num">8</div><div><div class="eyebrow">いつでもここへ</div><h2>今週の案内・困ったとき</h2></div></div>
     <div class="help">
-      <div class="card"><h3>今週のモーニングセミナー</h3><p class="muted" style="margin:0">（講話者・テーマ・日付）<span class="todo">更新方法を決める</span></p></div>
+      <div class="card"><h3>今週のモーニングセミナー</h3><p style="margin:0"><a href="#first-ms">「はじめての金曜の朝」の今週の案内を見る</a></p></div>
       <div class="card"><h3>困ったとき</h3><p style="margin:0">まずはバディへLINEで一言。<br>返事がないときは、Bチームの担当（お名前）へ。<span class="todo">要記入</span></p></div>
     </div>
   </div>
