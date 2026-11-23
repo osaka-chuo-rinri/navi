@@ -161,6 +161,26 @@ details.more[open]>summary::after{content:"− 閉じる"}
 .divider p{font:700 19px var(--font-display);margin:6px 0 2px}
 .divider small{color:var(--muted);font-size:14px}
 
+.slogan{background:linear-gradient(135deg,var(--accent) 0%,var(--c-orange) 100%);color:#fff;border-radius:20px;padding:18px 20px;margin:0 0 16px;font:900 22px/1.6 var(--font-display);text-align:center}
+.slogan small{display:block;font:700 12px var(--font-body);opacity:.9;margin-bottom:4px}
+.sub-h{font-size:18px;margin:22px 0 10px}
+.card-plain{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px}
+.card-plain p{font-size:15px;margin:0 0 8px}
+.from-note{font-size:12px;color:var(--muted);margin:6px 0 0}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px 10px;text-align:center}
+.stat b{display:block;font:900 26px/1.2 var(--font-display);color:var(--accent);font-variant-numeric:tabular-nums}
+.stat span{display:block;font-size:12px;color:var(--muted);line-height:1.5;margin-top:4px}
+.tree{display:grid;gap:4px;justify-items:stretch}
+.node{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-weight:700;font-size:15px}
+.node span{display:block;font-weight:400;font-size:13px;color:var(--muted);line-height:1.55}
+.node.top{border-color:color-mix(in srgb,var(--c-blue) 50%,var(--line))}
+.node.here{border:2px solid var(--accent);background:var(--accent-soft)}
+.arrow{text-align:center;color:var(--muted);line-height:1}
+.acts{display:grid;gap:8px}
+.act{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--c-green);border-radius:14px;padding:10px 14px}
+.act b{display:block;font-size:15px}
+.act span{display:block;font-size:13px;color:var(--muted);line-height:1.6}
 /* タイプ選択 */
 .types{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
 .types button{min-height:44px;padding:6px 14px;border-radius:999px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font:700 14px var(--font-body);cursor:pointer}
@@ -258,6 +278,7 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
     <li><a href="#today"><svg class="ico"><use href="#i-check"/></svg><div>今日やること<span>登録とチェックリスト</span></div></a></li>
     <li><a href="#first-ms"><svg class="ico"><use href="#i-sun"/></svg><div>はじめての金曜の朝<span>当日の流れ・服装・持ち物</span></div></a></li>
     <li><a href="#support"><svg class="ico"><use href="#i-pair"/></svg><div>一人にしない仕組み<span>誰に聞けばいい？</span></div></a></li>
+    <li><a href="#about"><svg class="ico"><use href="#i-sun"/></svg><div>倫理法人会とは<span>目的・規模・学びの場</span></div></a></li>
     <li><a href="#value"><svg class="ico"><use href="#i-heart"/></svg><div>中央区で手に入るもの<span>先輩たちの変化</span></div></a></li>
     <li><a href="#roadmap"><svg class="ico"><use href="#i-map"/></svg><div>これからの歩み<span>成長ロードマップ</span></div></a></li>
     <li><a href="#basics"><svg class="ico"><use href="#i-q"/></svg><div>2冊の本とよくある不安<span>万人幸福の栞・職場の教養・Q&amp;A</span></div></a></li>
@@ -430,10 +451,56 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
   <small>時間のあるときに、少しずつどうぞ。</small>
 </div>
 
+<!-- 倫理法人会とは -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">4</div><div><div class="eyebrow">あなたが入った会のこと</div><h2>倫理法人会とは</h2></div></div>
+    <div class="slogan"><small>倫理法人会のスローガン</small>企業に倫理を<br>職場に心を<br>家庭に愛を</div>
+    <p class="lead">経営者が「倫理」、つまり人として正しく、明るく生きる法則を学び、仕事と家庭で実践する会です。宗教団体でも政治団体でもありません。会の中での商売や勧誘も、規程で禁止されています。</p>
+
+    <h3 class="sub-h">何を目的にしている会？</h3>
+    <div class="card-plain">
+      <p>実行すればすぐに確かめられる生活の法則（純粋倫理）をもとに、<b>経営者自身が変わること</b>を出発点にしています。心を大切にする経営を目指す仲間の輪を広げ、互いを尊び共に生きる精神で健やかに栄え、地域と社会に貢献することを目的としています。</p>
+      <p class="from-note">出典：倫理法人会規程 第3条（要約）</p>
+    </div>
+
+    <h3 class="sub-h">どんな規模？</h3>
+    <div class="stats">
+      <div class="stat"><b>8万社</b><span>全国の倫理法人会が<br>目指している体制</span></div>
+      <div class="stat"><b>4,750社</b><span>大阪府倫理法人会の会員数<br>（令和8年5月時点）</span></div>
+      <div class="stat"><b>35単会</b><span>大阪府内で目指す<br>地域の会の数（令和9年度）</span></div>
+      <div class="stat"><b>180社</b><span>大阪中央区が目指す会員数<br>（2027年8月）</span></div>
+    </div>
+    <p class="from-note">出典：令和9年度 倫理法人会活動方針、大阪府倫理法人会 会長メッセージ・普及目標。地域ごとの会（単会）は、全国の各都道府県の中にあります。</p>
+
+    <h3 class="sub-h">どんな会とつながっている？</h3>
+    <div class="tree">
+      <div class="node top">一般社団法人 倫理研究所<span>『万人幸福の栞』の著者・丸山敏雄が始めた、倫理の研究と普及の団体</span></div>
+      <div class="arrow" aria-hidden="true">↓</div>
+      <div class="node">倫理法人会（全国）<span>経営者のための会。各都道府県に倫理法人会がある</span></div>
+      <div class="arrow" aria-hidden="true">↓</div>
+      <div class="node">大阪府倫理法人会<span>府内をブロックに分け、地域ごとの会を支える</span></div>
+      <div class="arrow" aria-hidden="true">↓</div>
+      <div class="node here">大阪中央区倫理法人会<span>あなたが入った会。毎週金曜の朝に集まります</span></div>
+    </div>
+
+    <h3 class="sub-h">どんな学びの場がある？</h3>
+    <div class="acts">
+      <div class="act"><b>経営者モーニングセミナー</b><span>毎週金曜の朝。講話者の体験談から学ぶ、会の中心となる場</span></div>
+      <div class="act"><b>活力朝礼</b><span>『職場の教養』を使った朝礼。会社に導入する指導も受けられる</span></div>
+      <div class="act"><b>倫理経営基礎講座</b><span>倫理の考え方を基本から順に学べる講座</span></div>
+      <div class="act"><b>経営者倫理セミナー</b><span>富士山麓の研修所で、日常を離れて自分と向き合う宿泊研修</span></div>
+      <div class="act"><b>後継者倫理塾</b><span>会社を継ぐ人・継いだ人のための学びの場</span></div>
+      <div class="act"><b>倫理経営の個別相談</b><span>経営や家庭の悩みを、研究所の講師に相談できる</span></div>
+    </div>
+    <p class="note-box">開催の時期や参加方法は会によって異なります。気になるものがあれば、バディに聞いてください。</p>
+  </div>
+</section>
+
 <!-- 4 中央区で手に入るもの -->
 <section id="value">
   <div class="wrap">
-    <div class="sec-head"><div class="sec-num">4</div><div><div class="eyebrow">入会した理由に合わせて</div><h2>中央区で手に入るもの</h2></div></div>
+    <div class="sec-head"><div class="sec-num">5</div><div><div class="eyebrow">入会した理由に合わせて</div><h2>中央区で手に入るもの</h2></div></div>
     <p class="lead">仕事のことだけでなく、家庭のこと、生き方のこと、自分自身のこと。<br>あなたが入会した理由は、どれに近いですか？タップしてみてください。</p>
     <div class="types" role="group" aria-label="入会した理由">
       <button type="button" data-type="0" aria-pressed="true">経営の軸を整えたい</button>
@@ -471,7 +538,7 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
 <!-- 5 ロードマップ -->
 <section id="roadmap">
   <div class="wrap">
-    <div class="sec-head"><div class="sec-num">5</div><div><div class="eyebrow">これからの歩み</div><h2>あなたの成長ロードマップ</h2></div></div>
+    <div class="sec-head"><div class="sec-num">6</div><div><div class="eyebrow">これからの歩み</div><h2>あなたの成長ロードマップ</h2></div></div>
     <p class="lead">9つの段階は、あなたの「状態」です。<br>期間は目安。早い・遅いはありません。</p>
     <div class="road">
       <span class="phase" style="--c:var(--c-red)">はじめの1か月ほど</span>
@@ -502,11 +569,11 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
 <!-- 6 よくある不安 -->
 <section id="basics">
   <div class="wrap">
-    <div class="sec-head"><div class="sec-num">6</div><div><div class="eyebrow">はじめての方へ</div><h2>2冊の本と、よくある不安</h2></div></div>
+    <div class="sec-head"><div class="sec-num">7</div><div><div class="eyebrow">はじめての方へ</div><h2>2冊の本と、よくある不安</h2></div></div>
     <h3 style="font-size:19px;margin:0 0 10px">手元に届く2冊</h3>
     <div class="books">
       <div class="book"><div class="book-photo" role="img" aria-label="写真の差し替え枠">写真<br>（実物を撮影して差し替え）</div><div><b>『万人幸福の栞（しおり）』</b><span>倫理法人会の考え方のもとになる本。丸山敏雄 著、倫理研究所 発行。17か条の短い教えが並んでいます。<br>読み方：1日1条ずつ、声に出して読む会員が多くいます。</span></div></div>
-      <div class="book"><div class="book-photo" role="img" aria-label="写真の差し替え枠">写真<br>（実物を撮影して差し替え）</div><div><b>『職場の教養』</b><span>1日1ページの小冊子。毎月届きます。活力朝礼で読み合わせるほか、会社の朝礼で使う会員もいます。<br>読み方：その日のページを読み、「今日の心がけ」を一つ実行する。</span></div></div>
+      <div class="book"><div class="book-photo" role="img" aria-label="写真の差し替え枠">写真<br>（実物を撮影して差し替え）</div><div><b>『職場の教養』</b><span>1日1ページの小冊子。会員に毎月贈られます。活力朝礼で読み合わせるほか、会社の朝礼で使う会員もいます。<br>読み方：その日のページを読み、「今日の心がけ」を一つ実行する。</span></div></div>
     </div>
     <div class="terms">
       <div class="term"><b>MS（モーニングセミナー）</b><span>毎週金曜6:30から、講話者の話を聞く場です。</span></div>
@@ -519,7 +586,7 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
       <details><summary>毎週は行けそうにありません</summary><p>行ける週だけで大丈夫です。行けない週はバディに一言送ってください。Instagramで様子を見ておくと、次に行ったとき話に入りやすくなります。</p></details>
       <details><summary>知り合いがいなくて不安です</summary><p>当日はバディが受付で待ち、朝食会でも隣に座ります。一人の時間をつくらないようにしています。</p></details>
       <details><summary>自分の仕事の話をしてもいいですか？</summary><p>自己紹介でお仕事を話すのは大丈夫です。会の中での宣伝や売り込みは、規程で禁止されています。</p></details>
-      <details><summary>会費や手続きのことを知りたい</summary><p>事務局にお問い合わせください。（問い合わせ先）<span class="todo">要記入</span></p></details>
+      <details><summary>会費や手続きのことを知りたい</summary><p>会費は月額1口1万円です（倫理法人会規程 第6条）。会員には『職場の教養』が贈られます。手続きのことは事務局にお問い合わせください。（問い合わせ先）<span class="todo">要記入</span></p></details>
       <details><summary>何を聞けばいいかわかりません</summary><p>「次の金曜、何時にどこへ行けばいいですか？」の一言からで十分です。</p></details>
     </div>
   </div>
@@ -528,7 +595,7 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
 <!-- 7 今週の案内・困ったとき -->
 <section id="help">
   <div class="wrap">
-    <div class="sec-head"><div class="sec-num">7</div><div><div class="eyebrow">いつでもここへ</div><h2>今週の案内・困ったとき</h2></div></div>
+    <div class="sec-head"><div class="sec-num">8</div><div><div class="eyebrow">いつでもここへ</div><h2>今週の案内・困ったとき</h2></div></div>
     <div class="help">
       <div class="card"><h3>今週のモーニングセミナー</h3><p class="muted" style="margin:0">（講話者・テーマ・日付）<span class="todo">更新方法を決める</span></p></div>
       <div class="card"><h3>困ったとき</h3><p style="margin:0">まずはバディへLINEで一言。<br>返事がないときは、Bチームの担当（お名前）へ。<span class="todo">要記入</span></p></div>
