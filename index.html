@@ -199,6 +199,12 @@ details.more[open]>summary::after{content:"− 閉じる"}
 .role-steps li{display:grid;grid-template-columns:6.5em 1fr;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:15px}
 .role-steps time{font-weight:700;color:var(--c-orange,#e8702a);font-size:13px}
 .fee{margin:0 0 6px;padding-left:1.2em;line-height:1.9;font-size:14px}
+.gate{margin:10px 0 0;background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:12px}
+.gate label{font-weight:700;font-size:14px}
+.gate-row{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:6px}
+.gate-row input{font-size:16px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;min-width:0}
+.gate-msg{font-size:14px;margin:6px 0 0;min-height:1em}
+.gate-links{display:grid;gap:8px;margin-top:8px}
 /* タイプ選択 */
 .types{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
 .types button{min-height:44px;padding:6px 14px;border-radius:999px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font:700 14px var(--font-body);cursor:pointer}
@@ -350,7 +356,7 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
       <div class="task" data-task>
         <input type="checkbox" id="t2" aria-describedby="t2d">
         <div>
-          <span class="tag buddy">バディの招待で</span>
+          <span class="tag buddy">バディの招待 または 合言葉で</span>
           <label for="t2">グループLINEに2つ参加する</label>
           <div class="line-purpose">
             <div class="lp"><b>大好きLINE</b>
@@ -362,7 +368,17 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
               <dt>届く情報</dt><dd>（どんな連絡が来るか）<span class="todo">要記入</span></dd>
               <dt>返信</dt><dd>（必要／不要）<span class="todo">要記入</span></dd></dl></div>
           </div>
-          <p class="why" id="t2d">バディから招待が届いたら「参加」を押せば完了です。通知が多ければ、トークごとに通知をオフにして大丈夫です。</p>
+          <p class="why" id="t2d">バディから招待が届いたら「参加」を押せば完了です。バディに会えないときは、入会時に聞いた合言葉を入れると参加ボタンが出ます。通知が多ければ、トークごとに通知をオフにして大丈夫です。</p>
+          <form class="gate" id="gate" autocomplete="off">
+            <label for="gatePw">合言葉（ひらがな）</label>
+            <div class="gate-row"><input id="gatePw" type="password" inputmode="text" placeholder="入会時に聞いた合言葉"><button class="btn" type="submit">開く</button></div>
+            <p class="gate-msg" id="gateMsg" aria-live="polite"></p>
+            <div class="gate-links" id="gateLinks" hidden>
+              <a class="btn" id="gl1" target="_blank" rel="noopener">大好きLINEに参加する</a>
+              <a class="btn" id="gl2" target="_blank" rel="noopener">明るく朗らかLINEに参加する</a>
+            </div>
+            <p class="credit">合言葉はバディ・Bチームから直接お伝えします。ほかの人には教えないでください。</p>
+          </form>
         </div>
       </div>
       <div class="task" data-task>
@@ -744,6 +760,29 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
   menu.addEventListener("click", function(e){ if (e.target.closest("a")) setMenu(false); });
   document.addEventListener("keydown", function(e){ if (e.key === "Escape") setMenu(false); });
   document.querySelectorAll('a[aria-disabled="true"]').forEach(function(a){ a.addEventListener("click", function(e){ e.preventDefault(); }); });
+
+
+  // 合言葉でグループLINEを開く（リンクは暗号化して保存）
+  (function(){
+    var B={"s": "yMG4Fe46WudOnX3s51WXVw==", "i": "PpXrh9WdjSzyVqxZ", "n": 600000, "c": "osWqdF6cGtMCiLsFbm0zIuI2oAg8YQyGWEu4l8ZA+8JqY9lnJfDdJmexcO5Ro3VqyPXsChkFESc00nIj5Vv2269vuXI7Mq9OG9JLJ+efGsBld0w9uEj78tUkVjwxCZ6o06z+GM6T18IBMy76"};
+    var f=document.getElementById("gate"); if(!f||!window.crypto||!crypto.subtle) return;
+    function d(x){return Uint8Array.from(atob(x),function(c){return c.charCodeAt(0);});}
+    function norm(v){return v.normalize("NFKC").replace(/\s+/g,"").replace(/[\u30a1-\u30f6]/g,function(c){return String.fromCharCode(c.charCodeAt(0)-0x60);});}
+    f.addEventListener("submit",function(e){
+      e.preventDefault();
+      var msg=document.getElementById("gateMsg"); msg.textContent="確認しています…";
+      var pw=new TextEncoder().encode(norm(document.getElementById("gatePw").value));
+      crypto.subtle.importKey("raw",pw,"PBKDF2",false,["deriveKey"]).then(function(k){
+        return crypto.subtle.deriveKey({name:"PBKDF2",salt:d(B.s),iterations:B.n,hash:"SHA-256"},k,{name:"AES-GCM",length:256},false,["decrypt"]);
+      }).then(function(key){
+        return crypto.subtle.decrypt({name:"AES-GCM",iv:d(B.i)},key,d(B.c));
+      }).then(function(buf){
+        var o=JSON.parse(new TextDecoder().decode(buf));
+        document.getElementById("gl1").href=o.daisuki; document.getElementById("gl2").href=o.akaruku;
+        document.getElementById("gateLinks").hidden=false; msg.textContent="合言葉が合いました。2つとも押して参加してください。";
+      }).catch(function(){ msg.textContent="合言葉が違うようです。バディかBチームに確認してください。"; });
+    });
+  })();
 
   // 入会した理由
   var answers = [
