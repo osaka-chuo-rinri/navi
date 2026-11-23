@@ -205,6 +205,8 @@ details.more[open]>summary::after{content:"− 閉じる"}
 .gate-row input{font-size:16px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;min-width:0}
 .gate-msg{font-size:14px;margin:6px 0 0;min-height:1em}
 .gate-links{display:grid;gap:8px;margin-top:8px}
+#invite .role-steps li{grid-template-columns:2.2em 1fr}
+#invite .role-steps time{font-size:20px;line-height:1.2}
 /* タイプ選択 */
 .types{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
 .types button{min-height:44px;padding:6px 14px;border-radius:999px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font:700 14px var(--font-body);cursor:pointer}
@@ -310,6 +312,7 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
     <li><a href="#about"><svg class="ico"><use href="#i-sun"/></svg><div>倫理法人会とは<span>目的・規模・学びの場</span></div></a></li>
     <li><a href="#value"><svg class="ico"><use href="#i-heart"/></svg><div>中央区で手に入るもの<span>先輩たちの変化</span></div></a></li>
     <li><a href="#roadmap"><svg class="ico"><use href="#i-map"/></svg><div>これからの歩み<span>成長ロードマップ</span></div></a></li>
+    <li><a href="#invite"><svg class="ico"><use href="#i-team"/></svg><div>お友達を誘いたいとき<span>誘い方と、よく聞かれること</span></div></a></li>
     <li><a href="#basics"><svg class="ico"><use href="#i-q"/></svg><div>2冊の本とよくある不安<span>万人幸福の栞・職場の教養・Q&amp;A</span></div></a></li>
     <li><a href="#help"><svg class="ico"><use href="#i-chat"/></svg><div>今週の案内・困ったとき<span>連絡先</span></div></a></li>
   </ul>
@@ -661,9 +664,31 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
 </section>
 
 <!-- 6 よくある不安 -->
+<section id="invite">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">7</div><div><div class="eyebrow">お友達を誘いたいとき</div><h2>入会してみて、いかがですか？</h2></div></div>
+    <p class="lead">金曜の朝を、楽しく続けられていたら本当にうれしいです。<br>もし「あの人にも来てほしいな」と思うお友達がいたら、こんなふうに進めてください。</p>
+    <ol class="role-steps">
+      <li><time>1</time><b>チームリーダー、または専任幹事に伝える<br><span class="muted" style="font-weight:400;font-size:14px">「○月○日（金）に、○○さんをお連れしたいです」と一言。受付の準備をしてくれます。</span></b></li>
+      <li><time>2</time><b>お友達をLINEで誘う<br><span class="muted" style="font-weight:400;font-size:14px">下のボタンで文面ができます。○の日付を直して送ってください。</span></b></li>
+      <li><time>3</time><b>当日は6時少し前に受付で待ち合わせ<br><span class="muted" style="font-weight:400;font-size:14px">あなたがお友達の「バディ」です。朝食会でも隣に座ってあげてください。</span></b></li>
+    </ol>
+    <a class="btn" href="https://line.me/R/share?text=%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF%E3%80%82%E7%A7%81%E3%81%8C%E5%8F%82%E5%8A%A0%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%80%8C%E5%A4%A7%E9%98%AA%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%80%AB%E7%90%86%E6%B3%95%E4%BA%BA%E4%BC%9A%E3%80%8D%E3%81%AE%E7%B5%8C%E5%96%B6%E8%80%85%E3%83%A2%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC%E3%81%AB%E3%80%81%E3%82%88%E3%81%8B%E3%81%A3%E3%81%9F%E3%82%89%E4%B8%80%E5%BA%A6%E3%81%94%E4%B8%80%E7%B7%92%E3%81%97%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B%EF%BC%9F%0A%E6%AF%8E%E9%80%B1%E9%87%91%E6%9B%9C%E3%81%AE%E6%9C%9D6%E6%99%82%E3%81%8B%E3%82%89%E3%80%81%E3%83%9B%E3%83%86%E3%83%AB%E3%83%97%E3%83%AA%E3%83%A0%E3%83%AD%E3%83%BC%E3%82%BA%E5%A4%A7%E9%98%AA%EF%BC%88%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%A4%A7%E6%89%8B%E5%89%8D%EF%BC%89%E3%81%A7%E3%80%81%E7%B5%8C%E5%96%B6%E8%80%85%E3%81%AE%E4%BD%93%E9%A8%93%E8%AB%87%E3%82%92%E8%81%9E%E3%81%8F%E4%BC%9A%E3%81%A7%E3%81%99%E3%80%82%E5%A3%B2%E3%82%8A%E8%BE%BC%E3%81%BF%E3%82%84%E5%8B%A7%E8%AA%98%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82%0A%E2%97%8B%E6%9C%88%E2%97%8B%E6%97%A5%EF%BC%88%E9%87%91%EF%BC%89%E3%81%AF%E3%81%94%E9%83%BD%E5%90%88%E3%81%84%E3%81%8B%E3%81%8C%E3%81%A7%E3%81%97%E3%82%87%E3%81%86%EF%BC%9F" target="_blank" rel="noopener">お友達にLINEで送る</a>
+    <p class="why" style="font-size:13px">押すとLINEが開きます。送り先を選び、日付を直して送信してください。</p>
+    <h3 class="sub-h">お友達によく聞かれること</h3>
+    <div class="faq">
+      <details><summary>朝6時って早くないですか？</summary><p>最初は早く感じますが、終わっても7時半すぎ。そのまま一日を始められます。「朝の時間が変わった」という声が多いです。</p></details>
+      <details><summary>宗教や勧誘の会ではない？</summary><p>宗教団体でも政治団体でもありません。会の中での商売や勧誘も、規程で禁止されています。一度来ただけで入会をすすめられることもありません。</p></details>
+      <details><summary>何を着ていけばいい？費用は？</summary><p>ふだんお仕事で着ている服で大丈夫です。ゲストの参加費は、チームリーダーか専任幹事に確認しておいてください。<span class="todo">要確認</span></p></details>
+      <details><summary>どんな人が来ているの？</summary><p>業種も年代もさまざまな経営者、後継者、幹部社員の方が来ています。同じ業界の人ばかりではないので、本音で話しやすい場です。</p></details>
+    </div>
+    <p class="note-box">誘うのは「来てほしい」と思える人だけで十分です。人数の目標はありません。</p>
+  </div>
+</section>
+
 <section id="basics">
   <div class="wrap">
-    <div class="sec-head"><div class="sec-num">7</div><div><div class="eyebrow">はじめての方へ</div><h2>2冊の本と、よくある不安</h2></div></div>
+    <div class="sec-head"><div class="sec-num">8</div><div><div class="eyebrow">はじめての方へ</div><h2>2冊の本と、よくある不安</h2></div></div>
     <h3 style="font-size:19px;margin:0 0 10px">手元に届く2冊</h3>
     <div class="books">
       <div class="book"><a href="https://www.rinri-jpn.or.jp/ec/html/products/detail/459" target="_blank" rel="noopener"><img src="https://www.rinri-jpn.or.jp/ec/html/html/upload/save_image/0129111001_697ac179703d0.jpg" width="96" height="138" loading="lazy" alt="『万人幸福の栞』の表紙"></a><div><b>『万人幸福の栞（しおり）』</b><span>倫理法人会の考え方のもとになる本。丸山敏雄 著、倫理研究所 発行。17か条の短い教えが並んでいます。<br>読み方：1日1条ずつ読み、気になった言葉を一つ実践してみる。<br><small class="credit">画像：倫理研究所 オンラインストア「倫理の本棚」より（仮掲載）</small></span></div></div>
@@ -695,7 +720,7 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
 <!-- 7 今週の案内・困ったとき -->
 <section id="help">
   <div class="wrap">
-    <div class="sec-head"><div class="sec-num">8</div><div><div class="eyebrow">いつでもここへ</div><h2>今週の案内・困ったとき</h2></div></div>
+    <div class="sec-head"><div class="sec-num">9</div><div><div class="eyebrow">いつでもここへ</div><h2>今週の案内・困ったとき</h2></div></div>
     <div class="help">
       <div class="card"><h3>今週のモーニングセミナー</h3><p style="margin:0"><a href="#first-ms">「はじめての金曜の朝」の今週の案内を見る</a></p></div>
       <div class="card"><h3>もっと知りたいとき（参考リンク）</h3>
