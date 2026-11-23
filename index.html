@@ -181,6 +181,10 @@ details.more[open]>summary::after{content:"− 閉じる"}
 .act{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--c-green);border-radius:14px;padding:10px 14px}
 .act b{display:block;font-size:15px}
 .act span{display:block;font-size:13px;color:var(--muted);line-height:1.6}
+.photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.photo-pair figure{margin:0}
+.photo-pair img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 6px 14px rgba(120,70,30,.10)}
+.photo-pair figcaption{font-size:13px;font-weight:700;text-align:center;margin-top:4px}
 /* タイプ選択 */
 .types{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
 .types button{min-height:44px;padding:6px 14px;border-radius:999px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font:700 14px var(--font-body);cursor:pointer}
@@ -463,6 +467,7 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
 <section id="about">
   <div class="wrap">
     <div class="sec-head"><div class="sec-num">4</div><div><div class="eyebrow">あなたが入った会のこと</div><h2>倫理法人会とは</h2></div></div>
+    <img class="illust" src="about-family.webp" width="960" height="640" loading="lazy" alt="会社の朝礼、職場の仲間、家庭の朝食の3つの場面が朝日でつながっているイラスト">
     <div class="slogan"><small>倫理法人会のスローガン</small>企業に倫理を<br>職場に心を<br>家庭に愛を</div>
     <p class="lead">経営者が、日々の行動や人との関わり方を学び、仕事と家庭で一つずつ実践していく会です。宗教団体でも政治団体でもありません。会の中での商売や勧誘も、規程で禁止されています。</p>
 
@@ -473,6 +478,7 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
     </div>
 
     <h3 class="sub-h">どんな規模？</h3>
+    <img class="illust" src="about-map.webp" width="960" height="640" loading="lazy" alt="日本地図の上に全国の光が広がり、大阪が明るく光るイラスト">
     <div class="stats">
       <div class="stat"><b>7万5千社</b><span>全国で倫理経営を<br>学んでいる企業</span></div>
       <div class="stat"><b>4,750社</b><span>大阪府倫理法人会の会員<br>（令和8年5月時点）</span></div>
@@ -493,6 +499,10 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
     </div>
 
     <h3 class="sub-h">どんな学びの場がある？</h3>
+    <div class="photo-pair">
+      <figure><img src="about-chorei.webp" width="960" height="640" loading="lazy" alt="朝の会場で経営者が並んで明るくあいさつする活力朝礼のイラスト"><figcaption>活力朝礼</figcaption></figure>
+      <figure><img src="about-fuji.webp" width="960" height="640" loading="lazy" alt="富士山の見える研修施設で経営者が朝の空気の中で語り合うイラスト"><figcaption>富士山麓での研修</figcaption></figure>
+    </div>
     <div class="acts">
       <div class="act"><b>経営者モーニングセミナー</b><span>毎週金曜の朝。講話者の体験談から学ぶ、会の中心となる場</span></div>
       <div class="act"><b>活力朝礼</b><span>『職場の教養』を使った朝礼。会社に導入する指導も受けられる</span></div>
