@@ -192,6 +192,12 @@ details.more[open]>summary::after{content:"− 閉じる"}
 .steps b{font:700 17px var(--font-display)}
 .steps span{display:block;font-size:14px;color:var(--muted);line-height:1.6}
 
+.books{display:grid;gap:10px;margin-bottom:22px}
+.book{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px}
+.book-photo{width:96px;height:128px;border-radius:10px;border:2px dashed var(--line);background:var(--bg);display:grid;place-items:center;text-align:center;font-size:11px;line-height:1.4;color:var(--muted)}
+.book img{width:96px;height:auto;border-radius:8px}
+.book b{display:block;font-size:16px}
+.book span{display:block;font-size:14px;color:var(--muted);line-height:1.65}
 /* FAQ・用語 */
 .terms{display:grid;gap:8px;margin-bottom:18px}
 .term{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px}
@@ -254,7 +260,7 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
     <li><a href="#support"><svg class="ico"><use href="#i-pair"/></svg><div>一人にしない仕組み<span>誰に聞けばいい？</span></div></a></li>
     <li><a href="#value"><svg class="ico"><use href="#i-heart"/></svg><div>中央区で手に入るもの<span>先輩たちの変化</span></div></a></li>
     <li><a href="#roadmap"><svg class="ico"><use href="#i-map"/></svg><div>これからの歩み<span>成長ロードマップ</span></div></a></li>
-    <li><a href="#basics"><svg class="ico"><use href="#i-q"/></svg><div>よくある不安<span>言葉の意味・Q&amp;A</span></div></a></li>
+    <li><a href="#basics"><svg class="ico"><use href="#i-q"/></svg><div>2冊の本とよくある不安<span>万人幸福の栞・職場の教養・Q&amp;A</span></div></a></li>
     <li><a href="#help"><svg class="ico"><use href="#i-chat"/></svg><div>今週の案内・困ったとき<span>連絡先</span></div></a></li>
   </ul>
 </nav>
@@ -428,13 +434,16 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
 <section id="value">
   <div class="wrap">
     <div class="sec-head"><div class="sec-num">4</div><div><div class="eyebrow">入会した理由に合わせて</div><h2>中央区で手に入るもの</h2></div></div>
-    <p class="lead">あなたが入会した理由は、どれに近いですか？<br>タップしてみてください。</p>
+    <p class="lead">仕事のことだけでなく、家庭のこと、生き方のこと、自分自身のこと。<br>あなたが入会した理由は、どれに近いですか？タップしてみてください。</p>
     <div class="types" role="group" aria-label="入会した理由">
       <button type="button" data-type="0" aria-pressed="true">経営の軸を整えたい</button>
       <button type="button" data-type="1" aria-pressed="false">相談できる仲間がほしい</button>
       <button type="button" data-type="2" aria-pressed="false">朝の習慣をつくりたい</button>
       <button type="button" data-type="3" aria-pressed="false">会社を継ぐ・継いだ</button>
       <button type="button" data-type="4" aria-pressed="false">社員に学ぶ場を</button>
+      <button type="button" data-type="5" aria-pressed="false">家庭・夫婦・親子のこと</button>
+      <button type="button" data-type="6" aria-pressed="false">これからの生き方</button>
+      <button type="button" data-type="7" aria-pressed="false">自分を変えたい</button>
     </div>
     <div class="answer" aria-live="polite"><h3 id="ansTitle"></h3><p id="ansText"></p></div>
 
@@ -443,6 +452,8 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
       <div class="gain"><div class="icon"><svg><use href="#i-pair"/></svg></div><h3>本音で話せる仲間</h3><p>業種も年代も違う経営者と同じ朝を</p></div>
       <div class="gain"><div class="icon"><svg><use href="#i-sun"/></svg></div><h3>朝の習慣</h3><p>週一度の早起きが、一週間を整える</p></div>
       <div class="gain"><div class="icon"><svg><use href="#i-heart"/></svg></div><h3>人としての信用</h3><p>続けるうちに人柄が伝わっていく</p></div>
+      <div class="gain"><div class="icon"><svg><use href="#i-team"/></svg></div><h3>家庭・身近な人</h3><p>家族への言葉と表情が変わっていく</p></div>
+      <div class="gain"><div class="icon"><svg><use href="#i-person"/></svg></div><h3>自分自身と向き合う</h3><p>週に一度、立ち止まって振り返る</p></div>
     </div>
     <p class="note-box">ここは商売の場ではありません。信頼が積み重なった先に、仕事のご縁が生まれることがあります。</p>
 
@@ -451,6 +462,8 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
       <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">（中央区の会員の声：入会前の悩み → 続けて変わったこと）<span class="from">○○業・入会○年目 <span class="todo">本人の許可を得て掲載</span></span></div></div>
       <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">（中央区の会員の声）<span class="from">○○業・入会○年目 <span class="todo">本人の許可を得て掲載</span></span></div></div>
       <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">他の地域では、社内で勉強会を続けていた会社の社長が入会し、学びを社内の取り組みに生かしています。夫婦の関係を見つめ直したことで苦しい時期を乗り越えた、という会長の話もあります。<span class="from">他の地域の会員インタビューより要約（coki.jp）</span></div></div>
+      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">一人で起業して1年ほどの頃、「朝活をしたい」と入会。続けるうちに心が落ち着き、仕事の環境も整ってきたと感じたそうです。倫理は「方法を教わるより、自分で気づく学び」だと話しています。<span class="from">他の地域の会報より要約（熊本県・八代市倫理法人会）</span></div></div>
+      <div class="voice"><div class="face"><svg class="ico"><use href="#i-person"/></svg></div><div class="text">子どもの学校の役員を引き受けたことをきっかけに、「自分の生き方を問い直したい」と思うようになり、倫理法人会に出会った会長もいます。学びは経営だけでなく、地域との関わりでも生きたそうです。<span class="from">他の地域の会員インタビューより要約（coki.jp）</span></div></div>
     </div>
   </div>
 </section>
@@ -489,7 +502,12 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
 <!-- 6 よくある不安 -->
 <section id="basics">
   <div class="wrap">
-    <div class="sec-head"><div class="sec-num">6</div><div><div class="eyebrow">はじめての方へ</div><h2>言葉の意味と、よくある不安</h2></div></div>
+    <div class="sec-head"><div class="sec-num">6</div><div><div class="eyebrow">はじめての方へ</div><h2>2冊の本と、よくある不安</h2></div></div>
+    <h3 style="font-size:19px;margin:0 0 10px">手元に届く2冊</h3>
+    <div class="books">
+      <div class="book"><div class="book-photo" role="img" aria-label="写真の差し替え枠">写真<br>（実物を撮影して差し替え）</div><div><b>『万人幸福の栞（しおり）』</b><span>倫理法人会の考え方のもとになる本。丸山敏雄 著、倫理研究所 発行。17か条の短い教えが並んでいます。<br>読み方：1日1条ずつ、声に出して読む会員が多くいます。</span></div></div>
+      <div class="book"><div class="book-photo" role="img" aria-label="写真の差し替え枠">写真<br>（実物を撮影して差し替え）</div><div><b>『職場の教養』</b><span>1日1ページの小冊子。毎月届きます。活力朝礼で読み合わせるほか、会社の朝礼で使う会員もいます。<br>読み方：その日のページを読み、「今日の心がけ」を一つ実行する。</span></div></div>
+    </div>
     <div class="terms">
       <div class="term"><b>MS（モーニングセミナー）</b><span>毎週金曜6:30から、講話者の話を聞く場です。</span></div>
       <div class="term"><b>活力朝礼</b><span>MSの前の朝礼。あいさつと小冊子の読み合わせ。</span></div>
@@ -573,7 +591,10 @@ footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
     ["立場の違う経営者と、本音で話せます", "同じ業界でも取引先でもない経営者だから話せることがあります。朝食会やチームの集まりで、少しずつ相談できる相手が増えていきます。"],
     ["週に一度の早起きが、リズムをつくります", "金曜の朝6時に集まる仲間がいると、早起きが続きやすくなります。朝の時間の使い方が変わったという会員も多くいます。"],
     ["先を行く経営者と、同じ朝を過ごせます", "継ぐ立場の悩みを経験してきた先輩経営者がいます。講話や朝食会で、自分より少し先を歩く人の話を直接聞けます。"],
-    ["会社の外に、学びの場を持てます", "幹部や社員が参加すると、会社の中では伝えにくい考え方に触れられます。小冊子『職場の教養』を会社の朝礼で使う会員もいます。"]
+    ["会社の外に、学びの場を持てます", "幹部や社員が参加すると、会社の中では伝えにくい考え方に触れられます。小冊子『職場の教養』を会社の朝礼で使う会員もいます。"],
+    ["家庭も、学びの場になります", "倫理の学びは、会社だけでなく家庭にも向いています。夫婦や親子の関係を見つめ直すきっかけになったという声は、各地の会員から聞かれます。まずは家族への「おはよう」と「ありがとう」から試す人が多くいます。"],
+    ["これからの生き方を、問い直せます", "仕事だけを走ってきた人が、子どもや地域と関わる中で「自分はどう生きたいか」を考え直し、倫理に出会ったという例もあります。毎週の講話には、さまざまな人生を歩んできた方の話があります。"],
+    ["自分の心と、向き合う時間ができます", "倫理の学びは、やり方を教わるより「自分で気づく」ことが中心です。週に一度、静かな朝に話を聞いて自分を振り返ることで、心が落ち着くようになったという会員もいます。"]
   ];
   var tbtns = Array.prototype.slice.call(document.querySelectorAll(".types button"));
   function showType(i){
