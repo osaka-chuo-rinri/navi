@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お友達を誘いたいとき｜大阪中央区倫理法人会 新入会員ナビ</title>
+<meta name="description" content="大阪中央区倫理法人会に入会された方のための案内ページです。入会初日にやること、はじめてのモーニングセミナー、サポートの仕組みをまとめています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 金曜の夜明け：空の青から朝日の橙へ。サポートBOOKの4色（紅・橙・青・緑）は役割の色として使う。スマホ1列、カードは大きく、文は短く */
+  --bg:#fffaf4;
+  --surface:#ffffff;
+  --ink:#2a2420;
+  --muted:#6e6358;
+  --line:#efe3d6;
+  --accent:#e46a24;
+  --accent-soft:#ffecdc;
+  --sky:#eaf3fb;
+  --c-red:#d9546a; --c-orange:#e98a2e; --c-blue:#3a7fc1; --c-green:#5f9a45;
+  --font-display:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;
+  --font-body:"BIZ UDPGothic","Hiragino Sans","Noto Sans JP",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1c1916; --surface:#272320; --ink:#f3ece4; --muted:#bcae9f; --line:#3b342d;
+    --accent:#f28a48; --accent-soft:#3b2a1e; --sky:#1f2a36;
+    --c-red:#ec7a8c; --c-orange:#f2a457; --c-blue:#6ea6dc; --c-green:#8cbf6f;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1c1916; --surface:#272320; --ink:#f3ece4; --muted:#bcae9f; --line:#3b342d;
+  --accent:#f28a48; --accent-soft:#3b2a1e; --sky:#1f2a36;
+  --c-red:#ec7a8c; --c-orange:#f2a457; --c-blue:#6ea6dc; --c-green:#8cbf6f;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.85;padding-bottom:88px}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;line-height:1.45;margin:0;font-weight:700}
+p{margin:0 0 14px}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:8px}
+.wrap{max-width:560px;margin:0 auto;padding:0 20px}
+svg.ico{width:28px;height:28px;flex:0 0 auto}
+.muted{color:var(--muted)}
+.todo{display:inline-block;font-size:12px;line-height:1.6;background:#fff1b8;color:#6b5400;border-radius:6px;padding:0 8px;margin-left:4px;vertical-align:middle;font-weight:700}
+:root[data-theme="dark"] .todo{background:#4a3f12;color:#ffe9a3}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .todo{background:#4a3f12;color:#ffe9a3}}
+
+/* ヘッダー */
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-weight:900;font-size:16px;line-height:1.2}
+.brand small{display:block;font-size:11px;color:var(--muted);font-weight:500}
+.brand .dot{width:26px;height:13px;border-radius:26px 26px 0 0;background:var(--accent)}
+#menuBtn{display:flex;align-items:center;gap:6px;height:42px;padding:0 14px;border:1px solid var(--line);background:var(--surface);border-radius:999px;cursor:pointer;color:var(--ink);font:700 14px var(--font-body)}
+#menuBtn i{display:block;width:16px;height:2px;background:currentColor;box-shadow:0 5px 0 currentColor,0 -5px 0 currentColor}
+nav#menu{position:fixed;inset:58px 0 0 0;background:color-mix(in srgb,var(--bg) 97%,transparent);display:none;z-index:19;overflow:auto}
+nav#menu.open{display:block}
+nav#menu ul{list-style:none;margin:0 auto;padding:12px 20px 40px;max-width:560px;display:grid;gap:10px}
+nav#menu a{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:16px;color:var(--ink);text-decoration:none;font-weight:700;font-size:17px}
+nav#menu a span{display:block;font-size:13px;color:var(--muted);font-weight:400;line-height:1.4}
+nav#menu .ico{color:var(--accent)}
+
+/* ヒーロー */
+.hero{background:linear-gradient(180deg,var(--sky) 0%,var(--accent-soft) 70%,var(--bg) 100%);padding:22px 0 30px}
+.hero-art{display:block;width:100%;height:auto;max-height:230px;margin:0 auto 8px}
+.hero .kicker{display:inline-block;font-size:13px;font-weight:700;color:var(--accent);background:var(--surface);border-radius:999px;padding:2px 12px;margin-bottom:10px}
+.hero h1{font-size:27px;font-weight:900;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.bubble{position:relative;background:var(--surface);border-radius:18px;padding:16px 18px;margin:16px 0;box-shadow:0 6px 18px rgba(120,70,30,.08)}
+.bubble::after{content:"";position:absolute;left:28px;bottom:-10px;border:10px solid transparent;border-top-color:var(--surface);border-bottom:0}
+.bubble p{margin:0}
+.by{display:flex;align-items:center;gap:10px;margin:14px 0 0 12px;font-size:14px;color:var(--muted)}
+.by .face{width:36px;height:36px;border-radius:50%;background:var(--accent);display:grid;place-items:center;color:#fff;font:700 14px var(--font-display)}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:56px;padding:12px 20px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font:700 17px var(--font-body);border:0;cursor:pointer;box-shadow:0 6px 14px color-mix(in srgb,var(--accent) 35%,transparent)}
+.btn.ghost{background:var(--surface);color:var(--accent);border:2px solid var(--accent);box-shadow:none;min-height:50px;font-size:15px}
+
+.illust{display:block;width:100%;height:auto;border-radius:20px;margin:0 0 16px;box-shadow:0 8px 20px rgba(120,70,30,.12)}
+.hero-img{margin:0 0 18px}
+.closing .illust{margin:0 0 6px}
+/* 3ステップの道のり */
+.journey{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0 6px;text-align:center}
+.journey div{background:var(--surface);border-radius:16px;padding:12px 6px;font-size:13px;font-weight:700;line-height:1.5}
+.journey b{display:block;font:900 22px var(--font-display);color:var(--accent);line-height:1.2}
+.journey .ico{display:block;margin:4px auto}
+
+/* セクション共通 */
+section{padding:36px 0}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sec-num{flex:0 0 44px;height:44px;border-radius:14px;background:var(--accent);color:#fff;display:grid;place-items:center;font:900 18px var(--font-display)}
+.sec-head .eyebrow{font-size:13px;color:var(--muted);font-weight:700;line-height:1.3}
+.sec-head h2{font-size:23px}
+.lead{font-size:16px}
+
+/* 今日やること */
+.progress{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 16px;margin:10px 0 16px;position:sticky;top:66px;z-index:5}
+.bar{flex:1;height:12px;background:var(--line);border-radius:12px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--c-orange),var(--c-green));transition:width .35s}
+.count{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;font-size:15px}
+.tasks{display:grid;gap:12px}
+.task{display:grid;grid-template-columns:44px 1fr;gap:12px;background:var(--surface);border:2px solid var(--line);border-radius:18px;padding:16px;transition:border-color .2s,background .2s}
+.task.done{border-color:var(--c-green);background:color-mix(in srgb,var(--c-green) 7%,var(--surface))}
+.task input{appearance:none;-webkit-appearance:none;width:36px;height:36px;margin:2px 0 0;border:2.5px solid var(--line);border-radius:10px;background:var(--surface);display:grid;place-items:center;cursor:pointer}
+.task input:checked{background:var(--c-green);border-color:var(--c-green)}
+.task input:checked::after{content:"";width:11px;height:19px;border:solid #fff;border-width:0 4px 4px 0;transform:translate(0,-2px) rotate(45deg)}
+.task label{display:block;font-weight:700;font-size:18px;line-height:1.5;cursor:pointer}
+.task .why{font-size:15px;color:var(--muted);line-height:1.7;margin:6px 0 0}
+.task .btn{margin-top:12px}
+.tag{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:1px 10px;margin-bottom:6px;color:#fff}
+.tag.buddy{background:var(--c-orange)} .tag.self{background:var(--c-blue)} .tag.office{background:var(--c-green)} .tag.leader{background:var(--c-red)}
+.mini{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:6px}
+.mini li{font-size:14px;background:var(--bg);border-radius:10px;padding:6px 10px;line-height:1.6}
+details.more{margin-top:14px}
+details.more>summary{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:0 18px;background:var(--surface);border:2px dashed var(--line);border-radius:18px;font-weight:700;cursor:pointer;list-style:none}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::after{content:"＋ 開く";color:var(--accent);font-size:14px}
+details.more[open]>summary{margin-bottom:12px}
+details.more[open]>summary::after{content:"− 閉じる"}
+
+/* 初回MS */
+.morning{background:linear-gradient(180deg,#24324a 0%,#4a5d7c 45%,#f3a46b 100%);color:#fff;border-radius:24px;padding:20px 18px 8px;overflow:hidden}
+.morning h3{font-size:18px;margin-bottom:6px}
+.morning .sub{font-size:14px;opacity:.9;margin-bottom:10px}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:12px 0;border-top:1px solid rgba(255,255,255,.25)}
+.tl time{font:900 20px var(--font-display);font-variant-numeric:tabular-nums}
+.tl b{display:block}
+.tl span{font-size:14px;opacity:.92;line-height:1.6}
+.facts{display:grid;gap:10px;margin-top:16px}
+.fact{display:grid;grid-template-columns:36px 1fr;gap:10px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 14px;font-size:15px;line-height:1.7}
+.fact .ico{color:var(--accent)}
+.fact b{display:block;font-size:16px}
+.ok{background:color-mix(in srgb,var(--c-green) 10%,var(--surface));border-color:color-mix(in srgb,var(--c-green) 40%,var(--line))}
+.ok .ico{color:var(--c-green)}
+
+/* サポート */
+.supports{display:grid;gap:12px}
+.sup{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px 16px;border-left:6px solid var(--c)}
+.sup .icon{width:56px;height:56px;border-radius:50%;background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);display:grid;place-items:center}
+.sup .icon svg{width:30px;height:30px}
+.sup b{font:700 18px var(--font-display)}
+.sup em{display:block;font-style:normal;color:var(--c);font-weight:700;font-size:14px;line-height:1.4}
+.sup p{font-size:14px;margin:4px 0 0;line-height:1.6;color:var(--muted)}
+.promise{background:var(--accent-soft);border-radius:20px;padding:18px;margin-top:16px}
+.promise h3{font-size:18px;margin-bottom:10px}
+.promise ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:p}
+.promise li{counter-increment:p;display:grid;grid-template-columns:32px 1fr;gap:10px;align-items:center;font-weight:700}
+.promise li::before{content:counter(p);width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font:900 15px var(--font-display)}
+.promise .note{font-size:14px;color:var(--muted);margin:12px 0 0;font-weight:400}
+
+/* 読み物の区切り */
+.divider{text-align:center;padding:30px 0 10px}
+.divider svg{width:120px;height:auto}
+.divider p{font:700 19px var(--font-display);margin:6px 0 2px}
+.divider small{color:var(--muted);font-size:14px}
+
+.slogan{background:linear-gradient(135deg,var(--accent) 0%,var(--c-orange) 100%);color:#fff;border-radius:20px;padding:18px 20px;margin:0 0 16px;font:900 22px/1.6 var(--font-display);text-align:center}
+.slogan small{display:block;font:700 12px var(--font-body);opacity:.9;margin-bottom:4px}
+.sub-h{font-size:18px;margin:22px 0 10px}
+.card-plain{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px}
+.card-plain p{font-size:15px;margin:0 0 8px}
+.from-note{font-size:12px;color:var(--muted);margin:6px 0 0}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px 10px;text-align:center}
+.stat b{display:block;font:900 26px/1.2 var(--font-display);color:var(--accent);font-variant-numeric:tabular-nums}
+.stat span{display:block;font-size:12px;color:var(--muted);line-height:1.5;margin-top:4px}
+.tree{display:grid;gap:4px;justify-items:stretch}
+.node{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-weight:700;font-size:15px}
+.node span{display:block;font-weight:400;font-size:13px;color:var(--muted);line-height:1.55}
+.node.top{border-color:color-mix(in srgb,var(--c-blue) 50%,var(--line))}
+.node.here{border:2px solid var(--accent);background:var(--accent-soft)}
+.arrow{text-align:center;color:var(--muted);line-height:1}
+.acts{display:grid;gap:8px}
+.act{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--c-green);border-radius:14px;padding:10px 14px}
+.act b{display:block;font-size:15px}
+.act span{display:block;font-size:13px;color:var(--muted);line-height:1.6}
+.photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.photo-pair figure{margin:0}
+.photo-pair img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 6px 14px rgba(120,70,30,.10)}
+.photo-pair figcaption{font-size:13px;font-weight:700;text-align:center;margin-top:4px}
+.about-fig{margin:0 0 16px}.about-fig .illust{margin:0 0 6px}.about-fig figcaption{font-size:13px;font-weight:700;text-align:center;color:var(--muted)}
+.line-purpose{display:grid;gap:8px;margin:8px 0}
+.lp{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14px}
+.lp dl{display:grid;grid-template-columns:4.5em 1fr;gap:4px 8px;margin:6px 0 0}
+.lp dt{color:var(--muted);font-weight:700}.lp dd{margin:0}
+.ref-links{margin:0;padding-left:1.2em;line-height:2}
+.from a,.from-note a{color:inherit;text-decoration:underline}
+.addr{display:block;font-size:14px;color:var(--muted);margin-top:2px}
+.venue-links{display:grid;gap:8px;margin-top:10px}
+.kokoroe{margin:0;padding-left:1.4em;line-height:1.8;font-size:15px}
+.role-steps{list-style:none;margin:0 0 8px;padding:0;display:grid;gap:6px}
+.role-steps li{display:grid;grid-template-columns:6.5em 1fr;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:15px}
+.role-steps time{font-weight:700;color:var(--c-orange,#e8702a);font-size:13px}
+.fee{margin:0 0 6px;padding-left:1.2em;line-height:1.9;font-size:14px}
+.gate{margin:10px 0 0;background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:12px}
+.gate label{font-weight:700;font-size:14px}
+.gate-row{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:6px}
+.gate-row input{font-size:16px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;min-width:0}
+.gate-msg{font-size:14px;margin:6px 0 0;min-height:1em}
+.gate-links{display:grid;gap:8px;margin-top:8px}
+#invite .role-steps li{grid-template-columns:2.2em 1fr}
+#invite .role-steps time{font-size:20px;line-height:1.2}
+/* タイプ選択 */
+.types{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
+.types button{min-height:44px;padding:6px 14px;border-radius:999px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font:700 14px var(--font-body);cursor:pointer}
+.types button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:#fff}
+.answer{background:var(--surface);border:2px solid var(--accent);border-radius:20px;padding:16px 18px}
+.answer h3{font-size:18px;color:var(--accent);margin-bottom:6px}
+.answer p{margin:0;font-size:16px}
+.gains{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.gain{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px;text-align:center}
+.gain .icon{width:52px;height:52px;margin:0 auto 6px;border-radius:16px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.gain .icon svg{width:28px;height:28px}
+.gain h3{font-size:16px}
+.gain p{font-size:13px;margin:4px 0 0;line-height:1.6;color:var(--muted)}
+.note-box{font-size:14px;color:var(--muted);background:var(--bg);border:1px dashed var(--line);border-radius:14px;padding:10px 14px;margin-top:12px}
+
+/* 声 */
+.voices{display:grid;gap:14px;margin-top:8px}
+.voice{display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:start}
+.voice .face{width:48px;height:48px;border-radius:50%;background:var(--sky);color:var(--c-blue);display:grid;place-items:center}
+.voice .text{background:var(--surface);border:1px solid var(--line);border-radius:4px 18px 18px 18px;padding:12px 14px;font-size:15px;line-height:1.75}
+.voice .from{display:block;font-size:12px;color:var(--muted);margin-top:6px}
+
+/* ロードマップ */
+.road{position:relative;margin-top:8px}
+.phase{display:inline-block;font-size:13px;font-weight:700;color:#fff;background:var(--c);border-radius:999px;padding:2px 12px;margin:14px 0 8px}
+.steps{list-style:none;margin:0;padding:0 0 0 22px;border-left:3px dotted var(--line);margin-left:20px;display:grid;gap:10px}
+.steps li{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:10px 14px 10px 16px}
+.steps li::before{content:attr(data-n);position:absolute;left:-41px;top:10px;width:34px;height:34px;border-radius:50%;background:var(--surface);border:3px solid var(--c);color:var(--c);display:grid;place-items:center;font:900 15px var(--font-display)}
+.steps b{font:700 17px var(--font-display)}
+.steps span{display:block;font-size:14px;color:var(--muted);line-height:1.6}
+
+.books{display:grid;gap:10px;margin-bottom:22px}
+.book{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px}
+.book-photo{width:96px;height:128px;border-radius:10px;border:2px dashed var(--line);background:var(--bg);display:grid;place-items:center;text-align:center;font-size:11px;line-height:1.4;color:var(--muted)}
+.book img{width:96px;height:auto;border-radius:8px}
+.book b{display:block;font-size:16px}
+.book span{display:block;font-size:14px;color:var(--muted);line-height:1.65}
+.week{background:var(--surface);border:2px solid var(--accent);border-radius:18px;padding:14px 16px;margin-top:16px}
+.week small{display:block;font-size:12px;color:var(--accent);font-weight:700}
+.week b{display:block;font-size:17px}
+.week span{display:block;font-size:14px;color:var(--muted)}
+.credit{display:block;font-size:11px;color:var(--muted);margin-top:4px}
+/* FAQ・用語 */
+.terms{display:grid;gap:8px;margin-bottom:18px}
+.term{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px}
+.term b{display:block;font-size:16px}
+.term span{font-size:14px;color:var(--muted);line-height:1.6}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:16px;margin-bottom:10px}
+.faq summary{display:grid;grid-template-columns:28px 1fr 20px;gap:8px;align-items:center;padding:14px 16px;font-weight:700;cursor:pointer;list-style:none;line-height:1.55}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";font:900 18px var(--font-display);color:var(--accent)}
+.faq summary::after{content:"＋";color:var(--muted)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding:0 16px 14px 52px;margin:0;font-size:15px;line-height:1.75}
+
+/* 最後 */
+.help{display:grid;gap:12px}
+.help .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px}
+.help h3{font-size:18px;margin-bottom:4px}
+.closing{background:linear-gradient(180deg,var(--bg) 0%,var(--accent-soft) 100%);text-align:center;padding:36px 0 40px}
+.closing h2{font-size:24px;font-weight:900;margin:10px 0 8px}
+.closing svg{width:180px;height:auto}
+footer{padding:20px 0 30px;font-size:13px;color:var(--muted);text-align:center}
+
+/* 画面下の帯 */
+#dock{position:fixed;left:0;right:0;bottom:0;z-index:18;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+#dock a{display:flex;justify-content:space-between;align-items:center;max-width:520px;margin:0 auto;min-height:54px;padding:0 20px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:16px}
+#dock.complete a{background:var(--c-green)}
+</style>
+</head>
+<body>
+<!-- アイコン（オリジナルの簡単な図形） -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.3 3.1 4.5 6.8 4.5c2.1 0 3.6 1.2 4.2 2.4h2c.6-1.2 2.1-2.4 4.2-2.4 3.7 0 5.9 3.8 4.4 7.3C19.5 16.4 12 21 12 21z"/></symbol>
+  <symbol id="i-pair" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="8" cy="7" r="3.2"/><circle cx="16.5" cy="7.5" r="2.8"/><path d="M1.8 19c0-3.7 2.8-6.3 6.2-6.3s6.2 2.6 6.2 6.3z"/><path d="M13.6 19c.1-1.9-.5-3.6-1.6-4.9.9-.8 2.4-1.4 4.5-1.4 3.1 0 5.7 2.4 5.7 6.3z"/></g></symbol>
+  <symbol id="i-team" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="6.5" r="3"/><circle cx="5" cy="9" r="2.4"/><circle cx="19" cy="9" r="2.4"/><path d="M6.5 20c0-3.6 2.4-6.2 5.5-6.2s5.5 2.6 5.5 6.2z"/><path d="M.8 19.5c0-2.8 1.8-4.8 4.2-4.8 1 0 1.8.3 2.4.8-.9 1.1-1.5 2.4-1.7 4z"/><path d="M23.2 19.5c0-2.8-1.8-4.8-4.2-4.8-1 0-1.8.3-2.4.8.9 1.1 1.5 2.4 1.7 4z"/></g></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path fill="currentColor" d="M5 2.5h2v19H5zM8 3.5h11.5l-2.8 4.2 2.8 4.3H8z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M4 12.5l5 5L20 6.5"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="currentColor"><path d="M4 17a8 8 0 0116 0z"/><rect x="2" y="18.5" width="20" height="2" rx="1"/><rect x="11" y="3" width="2" height="4" rx="1"/><rect x="3.6" y="7.6" width="2" height="4" rx="1" transform="rotate(-45 4.6 9.6)"/><rect x="18.4" y="7.6" width="2" height="4" rx="1" transform="rotate(45 19.4 9.6)"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="currentColor" d="M4 4h16a2 2 0 012 2v9a2 2 0 01-2 2H10l-5 4v-4H4a2 2 0 01-2-2V6a2 2 0 012-2z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5c3-1.2 6-1.2 8 .6V20c-2-1.6-5-1.6-8-.4zM21 5c-3-1.2-6-1.2-8 .6V20c2-1.6 5-1.6 8-.4z"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7zm0 4.2A2.8 2.8 0 1012 11.8 2.8 2.8 0 0012 6.2z"/></symbol>
+  <symbol id="i-shirt" viewBox="0 0 24 24"><path fill="currentColor" d="M8 3l4 2.5L16 3l6 3.5-2.5 4-2-1V21h-11V9.5l-2 1L2 6.5z"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path fill="currentColor" d="M16.5 3.5l4 4L9 19l-5 1 1-5z"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><path fill="currentColor" d="M3 8h14v6a5 5 0 01-5 5H8a5 5 0 01-5-5zM17 9.5h1.5a2.5 2.5 0 010 5H17v-2h1.5a.5.5 0 000-1H17zM3 20.5h14v1.5H3z"/></symbol>
+  <symbol id="i-q" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 110 20 10 10 0 010-20zm0 14.2a1.3 1.3 0 100 2.6 1.3 1.3 0 000-2.6zM12 6c-2.2 0-3.8 1.4-3.9 3.4h2.2c.1-.9.8-1.5 1.7-1.5s1.6.6 1.6 1.4c0 .7-.4 1.1-1.3 1.7-1.1.7-1.6 1.4-1.5 2.8V14h2.1v-.3c0-.8.3-1.2 1.2-1.8 1.1-.7 1.8-1.6 1.8-2.9C16.1 7.3 14.5 6 12 6z"/></symbol>
+  <symbol id="i-person" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7.5 8-7.5s8 3.1 8 7.5z"/></g></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3zm5 3.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9zm0 2a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM17.3 5.5a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><span class="dot" aria-hidden="true"></span><div>新入会員ナビ<small>大阪中央区倫理法人会</small></div></div>
+    <a href="./" style="font-weight:700;font-size:14px;text-decoration:none;color:var(--accent)">← ナビに戻る</a>
+  </div>
+</header>
+<main>
+<section id="invite" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">見たい方だけ</div><h2>お友達を誘いたいとき</h2></div></div>
+    <p class="lead">もし「この会を、あの人にも紹介したいな」と思うお友達がいたら、こんなふうに進めてください。<br>入会したばかりの今でも、もちろん大丈夫です。</p>
+    <ol class="role-steps">
+      <li><time>1</time><b>チームリーダー、または専任幹事に伝える<br><span class="muted" style="font-weight:400;font-size:14px">「○月○日（金）に、○○さんをお連れしたいです」と一言。受付の準備をしてくれます。</span></b></li>
+      <li><time>2</time><b>お友達をLINEで誘う<br><span class="muted" style="font-weight:400;font-size:14px">下のボタンで文面ができます。○の日付を直して送ってください。</span></b></li>
+      <li><time>3</time><b>当日は6時少し前に受付で待ち合わせ<br><span class="muted" style="font-weight:400;font-size:14px">あなたがお友達の「バディ」です。朝食会でも隣に座ってあげてください。</span></b></li>
+    </ol>
+    <a class="btn" href="https://line.me/R/share?text=%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF%E3%80%82%E7%A7%81%E3%81%8C%E5%8F%82%E5%8A%A0%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%80%8C%E5%A4%A7%E9%98%AA%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%80%AB%E7%90%86%E6%B3%95%E4%BA%BA%E4%BC%9A%E3%80%8D%E3%81%AE%E7%B5%8C%E5%96%B6%E8%80%85%E3%83%A2%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC%E3%81%AB%E3%80%81%E3%82%88%E3%81%8B%E3%81%A3%E3%81%9F%E3%82%89%E4%B8%80%E5%BA%A6%E3%81%94%E4%B8%80%E7%B7%92%E3%81%97%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B%EF%BC%9F%0A%E6%AF%8E%E9%80%B1%E9%87%91%E6%9B%9C%E3%81%AE%E6%9C%9D6%E6%99%82%E3%81%8B%E3%82%89%E3%80%81%E3%83%9B%E3%83%86%E3%83%AB%E3%83%97%E3%83%AA%E3%83%A0%E3%83%AD%E3%83%BC%E3%82%BA%E5%A4%A7%E9%98%AA%EF%BC%88%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%A4%A7%E6%89%8B%E5%89%8D%EF%BC%89%E3%81%A7%E3%80%81%E7%B5%8C%E5%96%B6%E8%80%85%E3%81%AE%E4%BD%93%E9%A8%93%E8%AB%87%E3%82%92%E8%81%9E%E3%81%8F%E4%BC%9A%E3%81%A7%E3%81%99%E3%80%82%E7%B5%8C%E5%96%B6%E8%80%85%E3%81%A7%E3%81%AA%E3%81%8F%E3%81%A6%E3%82%82%E3%80%81%E3%81%A9%E3%81%AA%E3%81%9F%E3%81%A7%E3%82%82%E5%8F%82%E5%8A%A0%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%80%82%E5%A3%B2%E3%82%8A%E8%BE%BC%E3%81%BF%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%9B%E3%82%93%E3%81%97%E3%80%81%E5%85%A5%E4%BC%9A%E3%82%92%E7%84%A1%E7%90%86%E3%81%AB%E3%81%99%E3%81%99%E3%82%81%E3%82%89%E3%82%8C%E3%82%8B%E3%81%93%E3%81%A8%E3%82%82%E3%81%82%E3%82%8A%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82%0A%E2%97%8B%E6%9C%88%E2%97%8B%E6%97%A5%EF%BC%88%E9%87%91%EF%BC%89%E3%81%AF%E3%81%94%E9%83%BD%E5%90%88%E3%81%84%E3%81%8B%E3%81%8C%E3%81%A7%E3%81%97%E3%82%87%E3%81%86%EF%BC%9F" target="_blank" rel="noopener">お友達にLINEで送る</a>
+    <p class="why" style="font-size:13px">押すとLINEが開きます。送り先を選び、日付を直して送信してください。</p>
+    <h3 class="sub-h">お友達によく聞かれること</h3>
+    <div class="faq">
+      <details><summary>朝6時って早くないですか？</summary><p>最初は早く感じますが、セミナーは7時45分ごろに終わり、そのあと朝食会です。そのまま一日を始められます。「朝の時間が変わった」という声が多いです。</p></details>
+      <details><summary>宗教の会？入会をしつこくすすめられない？</summary><p>宗教団体でも政治団体でもありません。会の中での商売や、宗教・政治・ほかの団体への勧誘は、規程で禁止されています。入会のご案内をすることはありますが、無理にすすめることはありません。お断りいただいても大丈夫です。</p></details>
+      <details><summary>何を着ていけばいい？費用は？</summary><p>ふだんお仕事で着ている服で大丈夫です。ゲストの参加費は<b>無料</b>です。</p></details>
+      <details><summary>どんな人が来ているの？</summary><p>経営者の団体ですが、経営者でなくても、働いている社会人ならどなたでも参加できます。人は会社を経営していなくても、「自分の人生」を経営している、という考え方からです。実際に、業種も年代もさまざまな経営者、後継者、幹部社員、会社員の方が来ています。同じ業界の人ばかりではないので、本音で話しやすい場です。</p></details>
+    </div>
+    <p class="note-box">会としては仲間を増やす目標を持っていますが、あなたが誰かを誘わなければならない、ということはありません。「来てほしい」と思える人が浮かんだときに、声をかけてあげてください。</p>
+    <a class="btn ghost" href="./" style="margin-top:20px">新入会員ナビのトップへ戻る</a>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">大阪中央区倫理法人会 新入会員ナビ（試作版）</div></footer>
+</body>
+</html>
